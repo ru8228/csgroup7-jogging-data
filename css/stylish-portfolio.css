@@ -171,24 +171,28 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
-.section-topic{
-  margin-bottom:10px;
+
+.section-topic {
+    margin-bottom: 10px;
 }
-.section-topic-color2{
-  height:10px;
+
+.section-topic-color2 {
+    height: 10px;
 }
+
+
 /* About */
 
 .about {
-    background-color:white;
+    background-color: white;
 }
 
-.about > .section-topic{
+.about>.section-topic {
     background-color: #FFEB3B;
 }
 
-.about > .section-topic-color2{
-    background-color:#FFA000;
+.about>.section-topic-color2 {
+    background-color: #FFA000;
 }
 
 #about-sun-item {
@@ -218,12 +222,12 @@ hr.small {
     height: 900px;
 }
 
-.services > .section-topic-color2{
+.services>.section-topic-color2 {
     background-color: #303F9F;
 }
 
-.services > .section-topic{
-    background-color: 
+.services>.section-topic {
+    background-color:
 }
 
 .service-item {
@@ -330,4 +334,23 @@ footer {
 .text-vertical-center>.btn-dark {
     border: 2px solid;
     border-radius: 20px;
+}
+
+
+/* map css */
+#map {
+  height: 400px;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
 }
