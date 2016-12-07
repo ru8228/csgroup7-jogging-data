@@ -1,11 +1,4 @@
-/*!
- * Start Bootstrap - Stylish Portfolio (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
-
-/* Global Styles */
+/* Global Styles 全域設置 */
 
 html, body {
     width: 100%;
@@ -41,7 +34,7 @@ body {
 }
 
 
-/* Custom Button Styles */
+/* Button Styles 按鈕樣式 */
 
 .btn-dark {
     border-radius: 0;
@@ -66,14 +59,14 @@ body {
 }
 
 
-/* Custom Horizontal Rule */
+/* Custom Horizontal Rule 線條設置 */
 
 hr.small {
     max-width: 100px;
 }
 
 
-/* Side Menu */
+/* Side Menu 導引列*/
 
 #sidebar-wrapper {
     z-index: 9999;
@@ -158,7 +151,7 @@ hr.small {
 }
 
 
-/* Header */
+/* Header 首頁*/
 
 .header {
     display: table;
@@ -181,15 +174,13 @@ hr.small {
 }
 
 
-/* About */
+/* About 關於慢跑*/
 
 .about {
     background-color: white;
 }
 
-.about>.section-topic {
-    background-color: #FFEB3B;
-}
+.about>.section-topic {}
 
 .about>.section-topic-color2 {
     background-color: #FFA000;
@@ -216,7 +207,7 @@ hr.small {
 }
 
 
-/* Services */
+/* Services 地圖分析*/
 
 .services {
     height: 900px;
@@ -239,10 +230,7 @@ hr.small {
     border-width: 2px;
     border-style: dashed;
     height: 400px;
-}
-
-.map-service-none {
-    height: 400px;
+    padding: 10px;
 }
 
 .map-info {
@@ -253,6 +241,55 @@ hr.small {
     border-color: black;
     border-width: 2px;
     border-style: dashed;
+}
+
+
+/* Map */
+
+#map{
+  height:100%;
+}
+
+
+.map-info-container {
+    padding: 0px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+.map iframe {
+    pointer-events: none;
+}
+
+/* map地圖顯示的資訊 css */
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+
+/* dataGraph 圖表呈現*/
+
+.dataGraph {
+    height: 900px;
+}
+
+.dataGraph>.section-topic-color2 {
+    background-color: #303F9F;
 }
 
 
@@ -301,23 +338,6 @@ hr.small {
 }
 
 
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-.map iframe {
-    pointer-events: none;
-}
-
-
 /* Footer */
 
 footer {
@@ -334,23 +354,4 @@ footer {
 .text-vertical-center>.btn-dark {
     border: 2px solid;
     border-radius: 20px;
-}
-
-
-/* map css */
-#map {
-  height: 400px;
-}
-.info {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-.info h4 {
-    margin: 0 0 5px;
-    color: #777;
 }
