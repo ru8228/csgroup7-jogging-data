@@ -164,21 +164,10 @@
 						<script>
 						function ShowValue(){
 							var v=document.getElementById("search_location").value;
+							if(v=="大安"){v="大安森林公園";}
 							alert(v);
-						}	
-						</script>
-						<!-- <p>時間</p>
-						<input id="search_time" type="text" name="search_time" /> -->
-						<input type="button" value="run" onclick="ShowValue()">
-						<div id = "info">
-							<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script><div id="test"></div>
-						<script>
-						//https://docs.google.com/spreadsheets/d/e/2PACX-1vRApq5kiMs3S0n3tp43axCQnJ-GPLnZVHtGXNexTV1eYN6qr57U0I7m-Z3hEDiyPqlu4nsATjpZkEMt/pubhtml
-						// var location='木柵河堤';
-						// var url='https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=';
-						// url=url.concat(document.getElementById("search_location").value);
-						$.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+document.getElementById("search_location").value, function(json){
-							console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+document.getElementById("search_location").value);
+							$.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+document.getElementById("search_location").value, function(json){
+							console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+v);
 						var e = json.feed.entry,
 						l = e.length,
 						html = "",
@@ -195,11 +184,19 @@
 							pm2 = entry.gsx$pm2.$t;
 							aqiaffect = entry.gsx$aqiaffect.$t;
 							pm2affect = entry.gsx$pm2affect.$t;
-							html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
+							// html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
+							html += "<br/>"+"目前溫度: "+temperature+"<br/>"+"降雨機率: "+rain+"%"+"<br/>"+"AQI空氣汙染指標: "+aqi+ aqiaffect+"<br/>"+"PM2.5: "+pm2+pm2affect+"<br/><br/>跑友這麼說...<br/>"+comment;
 						}
 						$("#test").html(html);
 						});
+						}	
 						</script>
+						<!-- <p>時間</p>
+						<input id="search_time" type="text" name="search_time" /> -->
+						<input type="button" value="run" onclick="ShowValue()">
+						<div id = "info">
+							<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script><div id="test"></div>
+						
 						</div>	
 					</div>
 					<div class="service-bar-item"></div>
