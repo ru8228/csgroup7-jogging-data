@@ -52,7 +52,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="homepage-hero-module">
+	<div class="homepage-hero-module" id="top">
 		<div class="video-text">
 			<div class="text-vertical-center">
 				<h1><span style="font-size:100px">跑</span>，是為了更好的自己</h1>
@@ -78,73 +78,73 @@
 	<section id="about" class="about">
 		<div class="section-topic-color2"></div>
 		<div class="col-lg-12 text-center section-topic">
-			<h2>慢跑的故事!</h2>
-
-			</p>
-
+			<h2>關於慢跑</h2>
+			<hr >
 		</div>
 		<div class="container">
 			<div class="row">
-
 				<div class="col-lg-12 text-center">
-					<div class="row">
+					<div class="row about-item-container">
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-1">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
-													</span>
-								<h4>
-																	<strong>慢跑介紹</strong>
-															</h4>
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
+								</span>
+								<h4><strong>慢跑的故事</strong></h4>
 								<p>慢跑的故事，慢跑的好處，慢跑的背景。</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-2">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
 								</span>
 								<h4><strong>慢跑HOT點</strong></h4>
 								<p>網路爬蟲得到的資訊整理</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-3">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
-													</span>
-								<h4>
-																	<strong>空氣品質</strong>
-															</h4>
+								  <i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
+								</span>
+								<h4><strong>空氣品質</strong></h4>
 								<p>空氣品質影響慢跑品質。</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-4">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
-													</span>
-								<h4>
-																	<strong>圖表呈現</strong>
-															</h4>
+									 <i class="fa fa-circle fa-stack-2x"></i>
+									 <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
+								</span>
+								<h4><strong>圖表呈現</strong></h4>
 								<p>綜合人口、交通、統計等，圖表呈現。</p>
-
 							</div>
 						</div>
 					</div>
-					<!-- /.row (nested) -->
 				</div>
 			</div>
-			<!-- /.row -->
+			<div class="row">
+				<div class="col-lg-12 text-center about-info">
+					<div class="about-info-item about-info-item-1">
+						<div></div>
+						<div></div>
+					</div>
+					<div class="about-info-item about-info-item-2"></div>
+					<div class="about-info-item about-info-item-3"></div>
+					<div class="about-info-item about-info-item-4"></div>
+				</div>
+			</div>
 		</div>
-		<!-- /.container -->
 	</section>
+
+
+
 	<!-- 地圖分析 Services -->
-	<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 	<section id="services" class="services">
 		<div class="section-topic-color2"></div>
 		<div class="col-lg-12 text-center section-topic">
@@ -160,44 +160,11 @@
 					<div class="service-bar-item">
 						<p>地點輸入</p>
 						<input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box" />
-
-						<script>
-						function ShowValue(){
-							var v=document.getElementById("search_location").value;
-							if(v=="大安"){v="大安森林公園";}
-							alert(v);
-							$.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+document.getElementById("search_location").value, function(json){
-							console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+v);
-						var e = json.feed.entry,
-						l = e.length,
-						html = "",
-						entry, i, area, location, station, comment, temperature, rain, AQI, PM2, AQI_affect, PM2_5_affect
-						for (i = 0; i < l; i++) {
-							entry = e[i];
-							area = entry.gsx$area.$t;
-							location = entry.gsx$location.$t;
-							station = entry.gsx$station.$t;
-							comment = entry.gsx$comment.$t;
-							temperature = entry.gsx$temperature.$t;
-							rain = entry.gsx$rain.$t;
-							aqi = entry.gsx$aqi.$t;
-							pm2 = entry.gsx$pm2.$t;
-							aqiaffect = entry.gsx$aqiaffect.$t;
-							pm2affect = entry.gsx$pm2affect.$t;
-							// html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
-							html += "<br/>"+"目前溫度: "+temperature+"<br/>"+"降雨機率: "+rain+"%"+"<br/>"+"AQI空氣汙染指標: "+aqi+ aqiaffect+"<br/>"+"PM2.5: "+pm2+pm2affect+"<br/><br/>跑友這麼說...<br/>"+comment+"let's run";
-						}
-						$("#test").html(html);
-						});
-						}	
-						</script>
-						<!-- <p>時間</p>
-						<input id="search_time" type="text" name="search_time" /> -->
 						<input type="button" value="run" onclick="ShowValue()">
-						<div id = "info">
-							<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script><div id="test"></div>
-						
-						</div>	
+
+						<div id="info">
+							<div id="test"></div>
+						</div>
 					</div>
 					<div class="service-bar-item"></div>
 					<div class="service-bar-item"></div>
@@ -553,23 +520,69 @@
 
 		</div>
 	</section>
-
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<h4><strong>Start Bootstrap</strong>
+									</h4>
+					<p>3481 Melrose Place
+						<br>Beverly Hills, CA 90210</p>
+					<ul class="list-unstyled">
+						<li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+						<li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+						</li>
+					</ul>
+					<br>
+					<ul class="list-inline">
+						<li>
+							<a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+						</li>
+					</ul>
+					<hr class="small">
+					<p class="text-muted">Copyright &copy; Your Website 2014</p>
+				</div>
+			</div>
+		</div>
+		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+	</footer>
 
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
-	<script src="js/videotest.js"></script>
-
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- map javascript  -->
+	<!-- 首頁影片video js -->
+	<script src="js/videotest.js"></script>
+	<!-- 地圖geojson js -->
 	<script type="text/javascript" src="js/TPEarea.geojson"></script>
 	<script type="text/javascript" src="js/tpeMrt.geojson"></script>
+	<!-- 地圖map區 js -->
 	<script type="text/javascript" src="js/map-01.js"></script>
+	<!-- 地圖search區 js -->
+	<script type="text/javascript" src="js/search.js"></script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+	<!-- 圖表graph區 js -->
 	<script type="text/javascript" src="js/graph-01.js"></script>
+
+
+
+
+
 	<!-- Custom Theme JavaScript -->
 	<script>
 		// Closes the sidebar menu
 		$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		// Closes the sidebar menu
+		$("#sidebar-wrapper").mouseleave(function(e) {
 			e.preventDefault();
 			$("#sidebar-wrapper").toggleClass("active");
 		});
@@ -618,28 +631,27 @@
 				}
 			}
 		});
-		// Disable Google Maps scrolling
-		// See http://stackoverflow.com/a/25904582/1607849
-		// Disable scroll zooming and bind back the click event
-		var onMapMouseleaveHandler = function(event) {
-			var that = $(this);
-			that.on('click', onMapClickHandler);
-			that.off('mouseleave', onMapMouseleaveHandler);
-			that.find('iframe').css("pointer-events", "none");
-		}
-		var onMapClickHandler = function(event) {
-				var that = $(this);
-				// Disable the click handler until the user leaves the map area
-				that.off('click', onMapClickHandler);
-				// Enable scrolling zoom
-				that.find('iframe').css("pointer-events", "auto");
-				// Handle the mouse leave event
-				that.on('mouseleave', onMapMouseleaveHandler);
-			}
-			// Enable map zooming with mouse scroll when the user clicks the map
-		$('.map').on('click', onMapClickHandler);
+
+
+		//about-info-dislay js
+		$(".about-item-1").hover(function(){
+			$(".about-info-item").hide();
+			$(".about-info-item-1").show();
+		})
+		$(".about-item-2").hover(function(){
+			$(".about-info-item").hide();
+			$(".about-info-item-2").show();
+		})
+		$(".about-item-3").hover(function(){
+			$(".about-info-item").hide();
+			$(".about-info-item-3").show();
+		})
+		$(".about-item-4").hover(function(){
+			$(".about-info-item").hide();
+			$(".about-info-item-4").show();
+		})
+
 	</script>
-	</div>
 </body>
 
 </html>
