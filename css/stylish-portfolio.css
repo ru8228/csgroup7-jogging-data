@@ -177,15 +177,13 @@ hr.small {
 /* About 關於慢跑*/
 }
 .about {
-    background-color: white;
+    background-image: url(../img/bg-3.jpg);
 }
-.about>.section-topic {}
 .about>.section-topic-color2 {
-    background-color: #FFA000;
+    background-color: #303F9F;
 }
 .about-item {
     margin-bottom: 30px;
-    background-color: ;
     border-radius: 30px;
     -webkit-transition: .5s;
     -moz-transition: .5s;
@@ -330,20 +328,6 @@ hr.small {
     -o-background-size: cover;
 }
 
-/* Portfolio */
-.portfolio {
-    padding: 50px 0;
-}
-.portfolio-item {
-    margin-bottom: 30px;
-}
-.img-portfolio {
-    margin: 0 auto;
-}
-.img-portfolio:hover {
-    opacity: 0.8;
-}
-
 /* Call to Action */
 .call-to-action {
     padding: 50px 0;
@@ -352,10 +336,20 @@ hr.small {
     margin: 10px;
 }
 
+
+/*group-intro組員介紹 */
+    .group-intro{
+      height:900px;
+      background-image:url(../img/bg.jpg);;
+    }
+    .group-intro>.section-topic-color2 {
+        background-color: #303F9F;
+    }
+
+
+
 /* Footer */
-footer {
-    padding: 100px 0;
-}
+
 #to-top {
     display: none;
     position: fixed;
