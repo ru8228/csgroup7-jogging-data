@@ -79,7 +79,6 @@
 		<div class="section-topic-color2"></div>
 		<div class="col-lg-12 text-center section-topic">
 			<h2>關於慢跑</h2>
-			<hr>
 		</div>
 		<div class="container">
 			<div class="row">
@@ -91,7 +90,7 @@
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
 								</span>
-								<h4><strong>慢跑的故事</strong></h4>
+								<h4><strong>慢跑story</strong></h4>
 								<p>慢跑的故事，慢跑的好處，慢跑的背景。</p>
 							</div>
 						</div>
@@ -130,15 +129,15 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center about-info">
-					<div class="about-info-item about-info-item-1">
+					<div class="about-info-item about-info-item-1 arrow_box">
 						<div>
 
 						</div>
 						<div></div>
 					</div>
-					<div class="about-info-item about-info-item-2"></div>
-					<div class="about-info-item about-info-item-3"></div>
-					<div class="about-info-item about-info-item-4"></div>
+					<div class="about-info-item about-info-item-2 arrow_box"></div>
+					<div class="about-info-item about-info-item-3 arrow_box"></div>
+					<div class="about-info-item about-info-item-4 arrow_box"></div>
 				</div>
 			</div>
 		</div>
@@ -276,31 +275,31 @@
 		</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2">
+					<div class="col-lg-2 col-md-2 col-sm-2">
 						<img src="img/member_sunny_01.jpg" class="center-block img-circle img-responsive">
 						<h3 class="text-center">Sunny</h3>
 					</div>
-					<div class="col-md-2">
+					<div class="col-lg-2 col-md-2 col-sm-2">
 						<img src="img/member_詩涵_01.jpg" class="center-block img-circle img-responsive">
 						<h3 class="text-center">詩涵</h3>
 					</div>
-					<div class="col-md-1">
+					<div class="col-lg-1 col-md-1 col-sm-1">
 						<img src="img/member_jiyu_01.jpg" class="center-block img-circle img-responsive">
 						<h4 class="text-center">Jiyu</h4>
 					</div>
-					<div class="col-md-2">
+					<div class="col-lg-2 col-md-2 col-sm-2">
 						<img src="img/member_amanda_01.jpg" class="center-block img-circle img-responsive">
 						<h3 class="text-center">Amanda</h3>
 					</div>
-					<div class="col-md-1">
+					<div class="col-lg-1 col-md-1 col-sm-1">
 						<img src="img/member_crea_01.jpg" class="center-block img-circle img-responsive">
 						<h4 class="text-center">Crea</h4>
 					</div>
-					<div class="col-md-2">
+					<div class="col-lg-2 col-md-2 col-sm-2">
 						<img src="img/member_ryan_01.jpg" class="center-block img-circle img-responsive">
 						<h3 class="text-center">Ryan</h3>
 					</div>
-					<div class="col-md-2">
+					<div class="col-lg-2 col-md-2 col-sm-2">
 						<img src="img/member_shasta_01.jpg" class="center-block img-circle img-responsive">
 						<h3 class="text-center">Shasta</h3>
 					</div>
@@ -308,11 +307,14 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<div class="col-md-4">
+					<div class="col-lg-4 col-md-4 col-sm-4">
 						<img src="img/P1190564.JPG" class="center-block img-rounded img-responsive">
 					</div>
-					<div class="col-md-4">
+					<div class="col-lg-4 col-md-4 col-sm-4">
 						<img src="img/P1190561.JPG" class="center-block img-rounded img-responsive">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="img/P1190558.JPG" class="center-block img-rounded img-responsive">
 					</div>
 				</div>
 			</div>
@@ -405,18 +407,25 @@
 		$(".about-item-1").hover(function() {
 			$(".about-info-item").hide();
 			$(".about-info-item-1").show();
+			$("#about-sun-item").css("color","#FFB61E");
+
 		})
+		// https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
 		$(".about-item-2").hover(function() {
 			$(".about-info-item").hide();
 			$(".about-info-item-2").show();
+			$("#about-mark-item").css("color","#C3272B");
+
 		})
 		$(".about-item-3").hover(function() {
 			$(".about-info-item").hide();
 			$(".about-info-item-3").show();
+			$("#about-air-item").css("color","#1F4788");
 		})
 		$(".about-item-4").hover(function() {
 			$(".about-info-item").hide();
 			$(".about-info-item-4").show();
+			$("#about-chart-item").css("color","#26A65B");
 		})
 	</script>
 </body>

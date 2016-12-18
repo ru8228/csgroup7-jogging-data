@@ -201,28 +201,17 @@ hr.small {
 }
 .about-item-container .about-item:hover {
     opacity: 1;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
-#about-sun-item {
-    color: yellow;
-}
-#about-mark-item {
-    color: red;
-}
-#about-air-item {
-    color: blue;
-}
-
-#about-chart-item {
-    color: green;
-}
-
-.fa-circle {
-    /*border: 2px dashed black;*/
+#about-sun-item
+,#about-mark-item
+,#about-air-item
+,#about-chart-item{
+    color: #6C7A89;
 }
 
 /*about-info 區  default value hidden */
@@ -236,18 +225,40 @@ hr.small {
 }
 
 .about-info-item-1{
-    background-color: yellow;
-    display: inline-block;
+  display: inline-block;
 }
-.about-info-item-2{
-    background-color: red;
+
+.arrow_box {
+	position: relative;
+	background: #white;
+	border: 2px solid #6C7A89;
 }
-.about-info-item-3{
-    background-color: blue;
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 11%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
-.about-info-item-4{
-    background-color: green;
+/*箭頭的設置方法*/
+.arrow_box:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: #white;
+	border-width: 15px;
+	margin-left: -15px;
 }
+.arrow_box:before {
+	border-color: rgba(108, 122, 137, 0);
+	border-bottom-color: #6C7A89;
+	border-width: 21px;
+	margin-left: -21px;
+}
+
+
+
 
 
 /* Services 地圖分析*/
@@ -309,7 +320,7 @@ hr.small {
 
 /* dataGraph 圖表呈現*/
 .dataGraph {
-    height: 900px;
+    height: auto;
 }
 .dataGraph>.section-topic-color2 {
     background-color: #303F9F;
@@ -340,7 +351,7 @@ hr.small {
 /*group-intro組員介紹 */
     .group-intro{
       height:900px;
-      background-image:url(../img/bg.jpg);;
+      /*background-image:url(../img/bg.jpg);*/
     }
     .group-intro>.section-topic-color2 {
         background-color: #303F9F;
