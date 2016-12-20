@@ -1,4 +1,4 @@
-/* Global Styles 全域設置 */
+    /* Global Styles 全域設置 */
 
 html, body {
     width: 100%;
@@ -42,7 +42,8 @@ body {
     bottom: 5px;
     right: 5px;
 }
-.text-vertical-center > .btn-dark {
+
+.text-vertical-center>.btn-dark {
     border: 2px solid;
     border-radius: 20px;
 }
@@ -186,13 +187,15 @@ hr.small {
 
 
 /* About 關於慢跑*/
-#tree-01{
-  position: absolute;
-  display: inline-block;
-  height: 100%;
-  left:-10%;
-  top:655px;
+
+#tree-01 {
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    left: -10%;
+    top: 655px;
 }
+
 
 }
 .about {
@@ -351,74 +354,73 @@ hr.small {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 #pac-input {
-  background-color: #fff;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 12px;
-  padding: 0 11px 0 13px;
-  text-overflow: ellipsis;
-  width: 300px;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
 }
-
 #pac-input:focus {
-  border-color: #4d90fe;
+    border-color: #4d90fe;
 }
-
 .pac-container {
-  font-family: Roboto;
+    font-family: Roboto;
 }
-
 #type-selector {
-  color: #fff;
-  background-color: #4d90fe;
-  padding: 5px 11px 0px 11px;
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
 }
 #type-selector label {
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 300;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
 }
 #target {
-       width: 345px;
-/* ########################################### */
+    width: 345px;
+    /* ########################################### */
+    /* dataGraph 圖表呈現*/
 
-/* dataGraph 圖表呈現*/
-.dataGraph {
-    height: auto;
-}
-.dataGraph>.section-topic-color2 {
-    background-color: #303F9F;
-}
+    .dataGraph {
+        height: auto;
+    }
 
-/* Callout */
-.callout {
-    display: table;
-    width: 100%;
-    height: 200px;
-    color: #fff;
-    background: url(../img/grass.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+    .dataGraph>.section-topic-color2 {
+        background-color: #303F9F;
+    }
+    /* Callout */
 
-/* Call to Action */
-.call-to-action {
-    padding: 50px 0;
-}
-.call-to-action .btn {
-    margin: 10px;
-}
+    .callout {
+        display: table;
+        width: 100%;
+        height: 200px;
+        color: #fff;
+        background: url(../img/grass.jpg) no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    /* Call to Action */
 
-/*group-intro組員介紹 */
-.group-intro {
-    height: 900px;
-    /*background-image:url(../img/bg.jpg);*/
-}
-.group-intro>.section-topic-color2 {
-    background-color: #303F9F;
-}
+    .call-to-action {
+        padding: 50px 0;
+    }
 
-/* Footer */
+    .call-to-action .btn {
+        margin: 10px;
+    }
+    /*group-intro組員介紹 */
+
+    .group-intro {
+        height: 900px;
+        /*background-image:url(../img/bg.jpg);*/
+    }
+
+    .group-intro>.section-topic-color2 {
+        background-color: #303F9F;
+    }
+    /* Footer */
