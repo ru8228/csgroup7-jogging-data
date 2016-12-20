@@ -1,4 +1,4 @@
-    /* Global Styles 全域設置 */
+/* Global Styles 全域設置 */
 
 html, body {
     width: 100%;
@@ -35,7 +35,7 @@ body {
 
 
 /* Button Styles 按鈕樣式 */
-
+/* wtf is going on??*/
 #to-top {
     display: none;
     position: fixed;
