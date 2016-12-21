@@ -178,21 +178,37 @@
 			<!-- 3 下方 google map區(暫定)  -->
 			<div class="row text-center">
 				<div class="map-location col-lg-12">
-					<div class="map-location-info col-lg-4" >
-							<div class="info-output" id="info-output">
-									https://www.youtube.com/watch?v=_kHz9snOS-U
-									https://jsfiddle.net/alvaroAV/qn8bb8q5/
-							</div>
+					<div class="map-location-info col-lg-4">
+						<div class="info-output" id="info-output">
+							https://www.youtube.com/watch?v=_kHz9snOS-U https://jsfiddle.net/alvaroAV/qn8bb8q5/
+						</div>
 					</div>
 					<div class="map-location-map col-lg-8">
-							<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-							<div id="map-2">
+						<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+						<div id="map-2">
 
-							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- /.container -->
+
+			<div class="container map-info-container">
+				<!-- 地圖 2 圖層選擇-->
+				<div class="row text-center ">
+					<!-- 1 左側控制選項欄 -->
+					<div class="map-service map-service-bar col-lg-3 col-md-3 col-sm-6">
+						<div class="service-bar-item">
+							<h4>圖層選擇</h4>
+
+						</div>
+
+					</div>
+					<!-- 2 右側地圖呈現區 -->
+					<div class="map-service map-showing col-lg-9 col-md-9 col-sm-6">
+						<div id="map-3" class="map"></div>
+					</div>
+				</div>
+			</div>
 	</section>
 	<section id="dataGraph" class="dataGraph">
 		<div class="section-topic-color2"></div>
@@ -344,12 +360,14 @@
 	<!-- 首頁影片video js -->
 	<script src="js/videotest.js"></script>
 	<!-- 地圖geojson js -->
-	<script type="text/javascript" src="js/TPEarea.geojson"></script>
+	<script type="text/javascript" src="js/tpeArea.geojson"></script>
 	<script type="text/javascript" src="js/tpeMrt.geojson"></script>
+	<script type="text/javascript" src="js/tpeVillage.geojson"></script>
+	<script type="text/javascript" src="js/tperiverpark.geojson"></script>
 	<!-- 地圖map區 js -->
 	<script type="text/javascript" src="js/map-01.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&libraries=places&callback=initAutocomplete"
-          async defer></script>
+	<script type="text/javascript" src="js/map-03.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&libraries=places&callback=initAutocomplete" async defer></script>
 	<!-- 地圖search區 js -->
 	<script type="text/javascript" src="js/search.js"></script>
 	<script type="text/javascript" src="js/google-map-location.js"></script>
@@ -391,30 +409,30 @@
 			});
 		});
 		//#to-top button appears after scrolling
-var fixed = false;
-$(document).scroll(function() {
-	if ($(this).scrollTop() > 250) {
-		if (!fixed) {
-			fixed = true;
-			// $('#to-top').css({position:'fixed', display:'block'});
-			$('#to-top').show("slow", function() {
-				$('#to-top').css({
-					position: 'fixed',
-					display: 'block'
-				});
-			});
-		}
-	} else {
-		if (fixed) {
-			fixed = false;
-			$('#to-top').hide("slow", function() {
-				$('#to-top').css({
-					display: 'none'
-				});
-			});
-		}
-	}
-});
+		var fixed = false;
+		$(document).scroll(function() {
+			if ($(this).scrollTop() > 250) {
+				if (!fixed) {
+					fixed = true;
+					// $('#to-top').css({position:'fixed', display:'block'});
+					$('#to-top').show("slow", function() {
+						$('#to-top').css({
+							position: 'fixed',
+							display: 'block'
+						});
+					});
+				}
+			} else {
+				if (fixed) {
+					fixed = false;
+					$('#to-top').hide("slow", function() {
+						$('#to-top').css({
+							display: 'none'
+						});
+					});
+				}
+			}
+		});
 
 
 		//about-info-dislay js

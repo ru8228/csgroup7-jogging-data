@@ -294,7 +294,7 @@ hr.small {
     border-style: solid;
     border-radius: 15px;
 }
-#map {
+#map,#map-3 {
     height: 100%;
 }
 .map-info-container {
