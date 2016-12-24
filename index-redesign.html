@@ -1,0 +1,321 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Lite -->
+    <link href="css/material.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/material.js"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Custom CSS -->
+    <link href="css/videotest.css" rel="stylesheet">
+    <link href="css/graph-01.css" rel="stylesheet">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet" type="text/css">
+    <link href="css/index-redisin.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css">
+    <!-- leaflet css & js -->
+    <link href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!-- d3 js -->
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- info -->
+    <meta name="ByGroup7" content="CSgroup7">
+    <title>台北市慢跑熱點分析</title>
+
+</head>
+
+<body>
+    <div class="section home-page">
+        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch-display-01" for="switch-1">
+        <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+        <span class="mdl-switch__label"></span>
+      </label>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-title-night.svg" class="center-block img-responsive  slideDown " id="img-title">
+                </div>
+            </div>
+        </div>
+        <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-grass-night-01.png" class="img-responsive" id="img-grass">
+        <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-light-01.svg" class="img-responsive slideUp " id="img-light-1">
+        <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-light-02.svg" class="img-responsive img-light" id="img-light-2">
+        <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-light-03.svg" class="img-responsive img-light" id="img-light-3">
+        <img src="C:\Users\Ji-Yu Huang\Desktop\csgroup7-jogging-data\img\jog-light-01.svg" class="img-responsive img-light" id="img-light-4">
+    </div>
+    <div class="section title-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="row about-item-container">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item about-item-1">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
+                  </span>
+                                <h4>
+                    <strong>慢跑story</strong>
+                  </h4>
+                                <p>慢跑的故事，慢跑的好處，慢跑的背景。</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item about-item-2">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
+                  </span>
+                                <h4>
+                    <strong>慢跑HOT點</strong>
+                  </h4>
+                                <p>網路爬蟲得到的資訊整理</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item about-item-3">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
+                  </span>
+                                <h4>
+                    <strong>空氣品質</strong>
+                  </h4>
+                                <p>空氣品質影響慢跑品質。</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="about-item about-item-4">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
+                  </span>
+                                <h4>
+                    <strong>圖表呈現</strong>
+                  </h4>
+                                <p>綜合人口、交通、統計等，圖表呈現。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" section air-section text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-air-title-01.png" class="center-block img-responsive" id="img-air-title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>空氣品質介紹1(下方一個圖)</h2>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center slide-bar-01">
+                            <!-- Slider -->
+                            <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <h2>空氣品質介紹2(下方一個圖)</h2>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section recommend-section">
+        <img src="img\jog-air-bottom.png" class="img-responsive " id="img-top-01">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-air-title-01.png" class="center-block img-responsive" id="img-air-title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">空氣品質介紹1(下方一個圖)</h2>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <h2 class="text-center">空氣品質介紹2(下方一個圖)</h2>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- 首頁影片video js -->
+        <script src="js/videotest.js"></script>
+        <!-- 地圖geojson js -->
+        <script type="text/javascript" src="js/tpeArea.geojson"></script>
+        <script type="text/javascript" src="js/tpeMrt.geojson"></script>
+        <script type="text/javascript" src="js/tpeVillage.geojson"></script>
+        <script type="text/javascript" src="js/tperiverpark.geojson"></script>
+        <!-- 地圖map區 js -->
+        <script type="text/javascript" src="js/map-01.js"></script>
+        <script type="text/javascript" src="js/map-03.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
+        <!-- 地圖search區 js -->
+        <script type="text/javascript" src="js/search.js"></script>
+        <script type="text/javascript" src="js/google-map-location.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!-- 圖表graph區 js -->
+        <script type="text/javascript" src="js/graph-01.js"></script>
+        <!-- 動畫js -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/img-light-animation.js"></script>
+        <!-- 內建 JavaScript -->
+        <script>
+            // img-title
+            // $(window).scroll(function() {
+            //     $('#img-title').each(function() {
+            //         var imagePos = $(this).offset().top;
+            //
+            //         var topOfWindow = $(window).scrollTop();
+            //         if (imagePos < topOfWindow + 400) {
+            //             $(this).addClass("slideDown");
+            //         }
+            //     });
+            // });
+            // $('#animatedElement').click(function() {
+            //     $(this).addClass("slideUp");
+            // });
+
+
+
+
+            // Closes the sidebar menu
+            $("#menu-close").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Closes the sidebar menu
+            $("#sidebar-wrapper").mouseleave(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Opens the sidebar menu
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Scrolls to the selected menu item on the page
+            $(function() {
+                $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+            //#to-top button appears after scrolling
+            var fixed = false;
+            $(document).scroll(function() {
+                if ($(this).scrollTop() > 250) {
+                    if (!fixed) {
+                        fixed = true;
+                        // $('#to-top').css({position:'fixed', display:'block'});
+                        $('#to-top').show("slow", function() {
+                            $('#to-top').css({
+                                position: 'fixed',
+                                display: 'block'
+                            });
+                        });
+                    }
+                } else {
+                    if (fixed) {
+                        fixed = false;
+                        $('#to-top').hide("slow", function() {
+                            $('#to-top').css({
+                                display: 'none'
+                            });
+                        });
+                    }
+                }
+            });
+
+            var aboutItemAnimatetime = 150;
+            //about-info-dislay js
+            $(".about-item-1").hover(function() {
+                    $(".about-info-item").hide();
+                    $(".about-info-item-1").show();
+                    $(".title-info").animate({
+                        backgroundColor: "#FFB61E"
+                    }, aboutItemAnimatetime);
+                    $("#about-sun-item").css("color", "#FFB61E");
+
+                })
+                // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
+            $(".about-item-2").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-2").show();
+                $(".title-info").animate({
+                    backgroundColor: "#C3272B"
+                }, aboutItemAnimatetime)
+                $("#about-mark-item").css("color", "#C3272B");
+            })
+
+            $(".about-item-3").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-3").show();
+                $(".title-info").animate({
+                    backgroundColor: "#1F4788"
+                }, aboutItemAnimatetime)
+                $("#about-air-item").css("color", "#1F4788");
+            })
+            $(".about-item-4").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-4").show();
+                $(".title-info").animate({
+                    backgroundColor: "#26A65B"
+                }, aboutItemAnimatetime)
+                $("#about-chart-item").css("color", "#26A65B");
+            })
+        </script>
+
+
+    </div>
+</body>
+
+</html>

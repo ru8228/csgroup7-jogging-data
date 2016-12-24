@@ -1,5 +1,38 @@
-var cities = new L.LayerGroup();
 
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>GeoJSON tutorial - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+	<style>
+		#map-3 {
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+
+<div id='map-3'></div>
+
+
+
+<script type="text/javascript" src="js/tpeArea.geojson"></script>
+<script type="text/javascript" src="js/tpeMrt.geojson"></script>
+<script type="text/javascript" src="js/tpeVillage.geojson"></script>
+<script type="text/javascript" src="js/tperiverpark.geojson"></script>
+<script type="text/javascript" src="js/recommendedplace.geojson"></script>
+
+<script>
+var citiesLayer = new L.LayerGroup();
+var areaLayer = new L.LayerGroup();
 // token
 var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
     '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -15,7 +48,9 @@ var grayscale = L.tileLayer(mbUrl, {
         id: 'mapbox.streets',
         attribution: mbAttr
     });
-L.marker([25.087818, 121.538607]).bindPopup('This is Littleton, CO.').addTo(cities),
+
+//範例點
+L.marker([25.087818, 121.538607]).bindPopup('This is Littleton, CO.').addTo(citiesLayer),
 
 //設function resetHighlight(e)，用於當mouseout的時候，還原最初之樣式設定。
 function resetHighlight(e) {
@@ -31,27 +66,28 @@ function zoomToFeature(e) {
 function onEachFeature2(feature, layer) {
 
     var popupContent = "<p>這裡是 " +
-        feature.properties.Name + "~~喔。<br>" +
-        feature.properties.Descriptio + "簡介不錯吧</p>";
+        feature.properties.Name + "。<br>" +
+				"簡介：<br>" +
+        feature.properties.Descriptio;
 
     layer.bindPopup(popupContent);
 }
 
 // 選項1
 var baseLayers = {
-    "Grayscale": grayscale,
-    "Streets": streets
+    "灰色底圖": grayscale,
+    "街道底圖": streets
 };
 // 選項2
 var overlays = {
-    "Cities": cities,
+    "資料圖層": citiesLayer,
 };
 
 //地圖輸出之div設定
 var map03 = L.map('map-3', {
     center: [25.087818, 121.538607],
     zoom: 11,
-    layers: [grayscale, cities]
+    layers: [grayscale, citiesLayer]
 });
 // 控制選項
 L.control.layers(baseLayers, overlays).addTo(map03);
@@ -70,4 +106,11 @@ L.geoJson(tpeRiverPark, {
   				fillOpacity: 0.8
         });
     }
-}).addTo(cities);
+}).addTo(citiesLayer);
+
+</script>
+
+
+
+</body>
+</html>
