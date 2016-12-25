@@ -7059,7 +7059,13 @@ html, body {
 
 /** home-page**/
 .switch-display-01{
-    display: inline-block;
+    width: 50px;
+    padding:2px 3px 2px 8px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top:20;
+    right: 30;
 }
 
 
