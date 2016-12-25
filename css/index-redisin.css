@@ -7070,7 +7070,7 @@ html, body {
 
 
 .home-page {
-    background-color: #103E55;
+    background-color:#103E55;
     height: 100%;
     position: relative;
     min-height: 600px;
@@ -7092,7 +7092,7 @@ html, body {
     position: absolute;
     min-height:200px;
     right: 10%;
-    bottom: 143px;
+    bottom: 153px;
     z-index: 5;
 }
 
@@ -7101,7 +7101,7 @@ html, body {
     position: absolute;
     min-height:200px;
     right: 10%;
-    bottom: 143px;
+    bottom: 153px;
     z-index: 5;
 }
 
@@ -7124,6 +7124,10 @@ html, body {
 #img-air-title{
     max-height: 150px;
 }
+#img-air-title-2{
+    max-height: 70px;
+    margin-top: 20px;
+}
 .air-info-1{
 	height:500px;
   border:2px solid black;
@@ -7133,7 +7137,7 @@ html, body {
   margin-top: 20px;
 }
 
-/*recommend-section*/
+/*air-section-2*/
 .recommend-section{
     background-color: #B1BAC1;
     position: relative;
