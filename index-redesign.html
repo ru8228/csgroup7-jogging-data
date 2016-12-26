@@ -207,162 +207,164 @@
                 </div>
             </div>
 
-          </div>
-            <!-- jQuery -->
-            <script src="js/jquery.js"></script>
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-            <!-- 首頁影片video js -->
-            <script src="js/videotest.js"></script>
-            <!-- 地圖geojson js -->
-            <script type="text/javascript" src="js/tpeArea.geojson"></script>
-            <script type="text/javascript" src="js/tpeMrt.geojson"></script>
-            <script type="text/javascript" src="js/tpeVillage.geojson"></script>
-            <script type="text/javascript" src="js/tperiverpark.geojson"></script>
-            <!-- 地圖map區 js -->
-            <script type="text/javascript" src="js/map-01.js"></script>
-            <script type="text/javascript" src="js/map-03.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
-            <!-- 地圖search區 js -->
-            <script type="text/javascript" src="js/search.js"></script>
-            <script type="text/javascript" src="js/google-map-location.js"></script>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-            <!-- 圖表graph區 js -->
-            <script type="text/javascript" src="js/graph-01.js"></script>
-            <!-- 動畫js -->
-            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-            <script type="text/javascript" src="js/img-light-animation.js"></script>
-            <!-- 內建 JavaScript -->
-            <script>
-                // img-title
-                // $(window).scroll(function() {
-                //     $('#img-title').each(function() {
-                //         var imagePos = $(this).offset().top;
-                //
-                //         var topOfWindow = $(window).scrollTop();
-                //         if (imagePos < topOfWindow + 400) {
-                //             $(this).addClass("slideDown");
-                //         }
-                //     });
-                // });
-                // $('#animatedElement').click(function() {
-                //     $(this).addClass("slideUp");
-                // });
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- 首頁影片video js -->
+        <script src="js/videotest.js"></script>
+        <!-- 地圖geojson js -->
+        <script type="text/javascript" src="js/tpeArea.geojson"></script>
+        <script type="text/javascript" src="js/tpeMrt.geojson"></script>
+        <script type="text/javascript" src="js/tpeVillage.geojson"></script>
+        <script type="text/javascript" src="js/tperiverpark.geojson"></script>
+        <!-- 地圖map區 js -->
+        <script type="text/javascript" src="js/map-01.js"></script>
+        <script type="text/javascript" src="js/map-03.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
+        <!-- 地圖search區 js -->
+        <script type="text/javascript" src="js/search.js"></script>
+        <script type="text/javascript" src="js/google-map-location.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!-- 圖表graph區 js -->
+        <script type="text/javascript" src="js/graph-01.js"></script>
+        <!-- 動畫js -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/img-light-animation.js"></script>
+        <!-- 內建 JavaScript -->
+        <script>
+            // img-title
+            // $(window).scroll(function() {
+            //     $('#img-title').each(function() {
+            //         var imagePos = $(this).offset().top;
+            //
+            //         var topOfWindow = $(window).scrollTop();
+            //         if (imagePos < topOfWindow + 400) {
+            //             $(this).addClass("slideDown");
+            //         }
+            //     });
+            // });
+            // $('#animatedElement').click(function() {
+            //     $(this).addClass("slideUp");
+            // });
 
-                //switch change theme
+            //switch change theme
 
-                // if ($("#switch-1").is(":checked")) {
-                //     $(".home-page").css("background-color", "#103E55");
-                // }
-                $('#switch-1').change(function() {
-                    if ($(this).attr("checked")) {
-                        $(".home-page").css("background-color", "#103E55");
-                        $("#img-title").attr("src", "img/jog-title-night.svg");
-                        $("#img-grass").attr("src", "img/jog-grass-night.png");
-                        return;
-                    }
+            // if ($("#switch-1").is(":checked")) {
+            //     $(".home-page").css("background-color", "#103E55");
+            // }
+            $('#switch-1').change(function() {
+                if ($(this).attr("checked")) {
+                    $(".home-page").css("background-color", "#103E55");
+                    $("#img-title").attr("src", "img/jog-title-night.svg");
+                    $("#img-grass").attr("src", "img/jog-grass-night.png");
+                    return;
+                } else {
                     $(".home-page").css("background-color", "#93d0f2");
                     $("#img-title").attr("src", "img/jog-title-day.svg");
                     $("#img-grass").attr("src", "img/jog-grass-day.png");
-                });
+                    return;
+                }
+            });
 
-                // Closes the sidebar menu
-                $("#menu-close").click(function(e) {
-                    e.preventDefault();
-                    $("#sidebar-wrapper").toggleClass("active");
-                });
-                // Closes the sidebar menu
-                $("#sidebar-wrapper").mouseleave(function(e) {
-                    e.preventDefault();
-                    $("#sidebar-wrapper").toggleClass("active");
-                });
-                // Opens the sidebar menu
-                $("#menu-toggle").click(function(e) {
-                    e.preventDefault();
-                    $("#sidebar-wrapper").toggleClass("active");
-                });
-                // Scrolls to the selected menu item on the page
-                $(function() {
-                    $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                            var target = $(this.hash);
-                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                            if (target.length) {
-                                $('html,body').animate({
-                                    scrollTop: target.offset().top
-                                }, 1000);
-                                return false;
-                            }
-                        }
-                    });
-                });
-                //#to-top button appears after scrolling
-                var fixed = false;
-                $(document).scroll(function() {
-                    if ($(this).scrollTop() > 250) {
-                        if (!fixed) {
-                            fixed = true;
-                            // $('#to-top').css({position:'fixed', display:'block'});
-                            $('#to-top').show("slow", function() {
-                                $('#to-top').css({
-                                    position: 'fixed',
-                                    display: 'block'
-                                });
-                            });
-                        }
-                    } else {
-                        if (fixed) {
-                            fixed = false;
-                            $('#to-top').hide("slow", function() {
-                                $('#to-top').css({
-                                    display: 'none'
-                                });
-                            });
+            // Closes the sidebar menu
+            $("#menu-close").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Closes the sidebar menu
+            $("#sidebar-wrapper").mouseleave(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Opens the sidebar menu
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+            // Scrolls to the selected menu item on the page
+            $(function() {
+                $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
                         }
                     }
                 });
+            });
+            //#to-top button appears after scrolling
+            var fixed = false;
+            $(document).scroll(function() {
+                if ($(this).scrollTop() > 250) {
+                    if (!fixed) {
+                        fixed = true;
+                        // $('#to-top').css({position:'fixed', display:'block'});
+                        $('#to-top').show("slow", function() {
+                            $('#to-top').css({
+                                position: 'fixed',
+                                display: 'block'
+                            });
+                        });
+                    }
+                } else {
+                    if (fixed) {
+                        fixed = false;
+                        $('#to-top').hide("slow", function() {
+                            $('#to-top').css({
+                                display: 'none'
+                            });
+                        });
+                    }
+                }
+            });
 
-                var aboutItemAnimatetime = 150;
-                //about-info-dislay js
-                $(".about-item-1").hover(function() {
-                        $(".about-info-item").hide();
-                        $(".about-info-item-1").show();
-                        $(".title-info").animate({
-                            backgroundColor: "#FFB61E"
-                        }, aboutItemAnimatetime);
-                        $("#about-sun-item").css("color", "#FFB61E");
-
-                    })
-                    // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
-                $(".about-item-2").hover(function() {
+            var aboutItemAnimatetime = 150;
+            //about-info-dislay js
+            $(".about-item-1").hover(function() {
                     $(".about-info-item").hide();
-                    $(".about-info-item-2").show();
+                    $(".about-info-item-1").show();
                     $(".title-info").animate({
-                        backgroundColor: "#C3272B"
-                    }, aboutItemAnimatetime)
-                    $("#about-mark-item").css("color", "#C3272B");
-                })
+                        backgroundColor: "#FFB61E"
+                    }, aboutItemAnimatetime);
+                    $("#about-sun-item").css("color", "#FFB61E");
 
-                $(".about-item-3").hover(function() {
-                    $(".about-info-item").hide();
-                    $(".about-info-item-3").show();
-                    $(".title-info").animate({
-                        backgroundColor: "#1F4788"
-                    }, aboutItemAnimatetime)
-                    $("#about-air-item").css("color", "#1F4788");
                 })
-                $(".about-item-4").hover(function() {
-                    $(".about-info-item").hide();
-                    $(".about-info-item-4").show();
-                    $(".title-info").animate({
-                        backgroundColor: "#26A65B"
-                    }, aboutItemAnimatetime)
-                    $("#about-chart-item").css("color", "#26A65B");
-                })
-            </script>
+                // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
+            $(".about-item-2").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-2").show();
+                $(".title-info").animate({
+                    backgroundColor: "#C3272B"
+                }, aboutItemAnimatetime)
+                $("#about-mark-item").css("color", "#C3272B");
+            })
+
+            $(".about-item-3").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-3").show();
+                $(".title-info").animate({
+                    backgroundColor: "#1F4788"
+                }, aboutItemAnimatetime)
+                $("#about-air-item").css("color", "#1F4788");
+            })
+            $(".about-item-4").hover(function() {
+                $(".about-info-item").hide();
+                $(".about-info-item-4").show();
+                $(".title-info").animate({
+                    backgroundColor: "#26A65B"
+                }, aboutItemAnimatetime)
+                $("#about-chart-item").css("color", "#26A65B");
+            })
+        </script>
 
 
-        </div>
+    </div>
 </body>
 
 </html>
