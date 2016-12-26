@@ -20,7 +20,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 html {
-    font-family: sans-serif,'cwTeXHei', serif;
+    font-family: sans-serif, 'cwTeXHei', serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -1352,7 +1352,7 @@ html {
 }
 
 body {
-    font-family: Lato,'cwTeXHei', serif;
+    font-family: Lato, 'cwTeXHei', serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #000000;
@@ -1449,7 +1449,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Lato,'cwTeXHei', serif;
+    font-family: Lato, 'cwTeXHei', serif;
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
@@ -7058,19 +7058,19 @@ html, body {
 
 
 /** home-page**/
-.switch-display-01{
+
+.switch-display-01 {
     width: 50px;
-    padding:2px 3px 2px 8px;
+    padding: 2px 3px 2px 8px;
     background-color: white;
     border-radius: 20px;
     position: absolute;
-    top:20;
+    top: 20;
     right: 30;
 }
 
-
 .home-page {
-    background-color:#103E55;
+    background-color: #103E55;
     height: 100%;
     position: relative;
     min-height: 600px;
@@ -7087,21 +7087,22 @@ html, body {
     min-height: 250px;
     visibility: hidden;
 }
-#img-light-1{
+
+#img-light-1 {
     visibility: hidden;
     position: absolute;
-    min-height:200px;
+    min-height: 200px;
     right: 10%;
-    bottom: 153px;
+    bottom: 150px;
     z-index: 5;
 }
 
 .img-light {
-    display:none;
+    display: none;
     position: absolute;
-    min-height:200px;
+    min-height: 200px;
     right: 10%;
-    bottom: 153px;
+    bottom: 150px;
     z-index: 5;
 }
 
@@ -7110,43 +7111,88 @@ html, body {
     position: relative;
 }
 
+
 /** title-info **/
 
 .title-info {
     background-color: #C3272B;
 }
 
-.air-section{
+.air-section {
     background-color: #E6E1DE;
 }
 
+
 /*air-info */
-#img-air-title{
+
+#img-air-title {
     max-height: 150px;
 }
-#img-air-title-2{
+
+#img-air-title-2 {
     max-height: 70px;
     margin-top: 20px;
 }
-.air-info-1{
-	height:500px;
-  border:2px solid black;
-  border-radius: 20px;
-}
-.slide-bar-01{
-  margin-top: 20px;
+
+.air-info-1 {
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
+.slide-bar-01 {
+    margin-top: 20px;
+}
+
+
 /*air-section-2*/
-.recommend-section{
+
+.recommend-section {
     background-color: #B1BAC1;
     position: relative;
 }
 
-#img-top-01{
-  position: absolute;
-  top:0px;
-  z-index: 50;
-  height:15px;
-  width:200%;
+#img-top-01 {
+    position: absolute;
+    top: 0px;
+    z-index: 50;
+    height: 15px;
+    width: 200%;
+}
+
+
+/* pop-section */
+
+.pop-section {
+    background-color: #282D33;
+    position: relative;
+}
+
+#img-pop-title {
+    max-height: 70px;
+}
+
+
+/* mapService-section */
+
+.mapService-section{
+  background-color: #E6E1DE;
+  position: relative;
+}
+
+#img-mapService-title{
+  max-height: 70px;
+  margin-bottom: 20px;
+}
+
+.map-control-01{
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.map-info-01{
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 20px;
 }
