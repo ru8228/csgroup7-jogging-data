@@ -48,11 +48,11 @@
 				<a href="#dataGraph" onclick=$( "#menu-close").click();>圖表呈現</a>
 			</li>
 			<li>
-				<a href="#contact" onclick=$( "#menu-close").click();>組員介紹</a>
+				<a href="#group-intro" onclick=$( "#menu-close").click();>組員介紹</a>
 			</li>
 		</ul>
 	</nav>
-	<div class="homepage-hero-module">
+	<div class="homepage-hero-module" id="top">
 		<div class="video-text">
 			<div class="text-vertical-center">
 				<h1><span style="font-size:100px">跑</span>，是為了更好的自己</h1>
@@ -76,75 +76,77 @@
 
 	<!-- About -->
 	<section id="about" class="about">
+		<img src="./img/tree-01.png" alt="tree" id="tree-01">
 		<div class="section-topic-color2"></div>
 		<div class="col-lg-12 text-center section-topic">
-			<h2>慢跑的故事!</h2>
-
-			</p>
-
+			<h2>關於慢跑</h2>
 		</div>
 		<div class="container">
 			<div class="row">
-
 				<div class="col-lg-12 text-center">
-					<div class="row">
+					<div class="row about-item-container">
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-1">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
-													</span>
-								<h4>
-																	<strong>慢跑介紹</strong>
-															</h4>
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
+								</span>
+								<h4><strong>慢跑story</strong></h4>
 								<p>慢跑的故事，慢跑的好處，慢跑的背景。</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-2">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
 								</span>
 								<h4><strong>慢跑HOT點</strong></h4>
 								<p>網路爬蟲得到的資訊整理</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-3">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
-													</span>
-								<h4>
-																	<strong>空氣品質</strong>
-															</h4>
+								  <i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
+								</span>
+								<h4><strong>空氣品質</strong></h4>
 								<p>空氣品質影響慢跑品質。</p>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-6">
-							<div class="service-item">
+							<div class="about-item about-item-4">
 								<span class="fa-stack fa-5x">
-															<i class="fa fa-circle fa-stack-2x"></i>
-															<i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
-													</span>
-								<h4>
-																	<strong>圖表呈現</strong>
-															</h4>
+									 <i class="fa fa-circle fa-stack-2x"></i>
+									 <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
+								</span>
+								<h4><strong>圖表呈現</strong></h4>
 								<p>綜合人口、交通、統計等，圖表呈現。</p>
-
 							</div>
 						</div>
 					</div>
-					<!-- /.row (nested) -->
 				</div>
 			</div>
-			<!-- /.row -->
+			<div class="row">
+				<div class="col-lg-12 text-center about-info">
+					<div class="about-info-item about-info-item-1 arrow_box">
+						<div>
+
+						</div>
+						<div></div>
+					</div>
+					<div class="about-info-item about-info-item-2 arrow_box"></div>
+					<div class="about-info-item about-info-item-3 arrow_box"></div>
+					<div class="about-info-item about-info-item-4 arrow_box"></div>
+				</div>
+			</div>
 		</div>
-		<!-- /.container -->
 	</section>
+
+
+
 	<!-- 地圖分析 Services -->
-	<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 	<section id="services" class="services">
 		<div class="section-topic-color2"></div>
 		<div class="col-lg-12 text-center section-topic">
@@ -158,20 +160,55 @@
 				<!-- 1 左側控制選項欄 -->
 				<div class="map-service map-service-bar col-lg-3 col-md-3 col-sm-6">
 					<div class="service-bar-item">
-						<p>地點輸入</p>
+						<h4>地點輸入</h4>
+						<input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box" />
+						<input type="button" value="run" onclick="ShowValue()">
+
+						<div id="info">
+							<div id="test"></div>
+						</div>
 					</div>
-					<div class="service-bar-item"></div>
-					<div class="service-bar-item"></div>
+
 				</div>
 				<!-- 2 右側地圖呈現區 -->
 				<div class="map-service map-showing col-lg-9 col-md-9 col-sm-6">
 					<div id="map" class="map"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="map-info col-lg-12"></div>
+			<!-- 3 下方 google map區(暫定)  -->
+			<div class="row text-center">
+				<div class="map-location col-lg-12">
+					<div class="map-location-info col-lg-4">
+						<div class="info-output" id="info-output">
+							https://www.youtube.com/watch?v=_kHz9snOS-U https://jsfiddle.net/alvaroAV/qn8bb8q5/
+						</div>
+					</div>
+					<div class="map-location-map col-lg-8">
+						<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+						<div id="map-2">
+
+						</div>
+					</div>
+				</div>
 			</div>
-			<!-- /.container -->
+
+			<div class="container map-info-container">
+				<!-- 地圖 2 圖層選擇-->
+				<div class="row text-center ">
+					<!-- 1 左側控制選項欄 -->
+					<div class="map-service map-service-bar col-lg-3 col-md-3 col-sm-6">
+						<div class="service-bar-item">
+							<h4>圖層選擇</h4>
+
+						</div>
+
+					</div>
+					<!-- 2 右側地圖呈現區 -->
+					<div class="map-service map-showing col-lg-9 col-md-9 col-sm-6">
+						<div id="map-3" class="map"></div>
+					</div>
+				</div>
+			</div>
 	</section>
 	<section id="dataGraph" class="dataGraph">
 		<div class="section-topic-color2"></div>
@@ -181,356 +218,173 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<div class="panel panel-default">
+					<div class="panel panel-primary">
 						<div class="panel-heading">
-							Default Panel
+							文字雲
 						</div>
 						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+							<p>
+								用此種方式產出https://timdream.org/wordcloud/<br> hover時候,放大此div
+								<br> 預計使用類似這種特效http://bl.ocks.org/jwhitfieldseed/9697914
+							</p>
+							<img src="./img/temp-cloud.JPG" alt="文字雲" width="300px" height="300px"></img>
 						</div>
 						<div class="panel-footer">
-							Panel Footer
+							說明
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							Primary Panel
-						</div>
-						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-						</div>
-						<div class="panel-footer">
-							Panel Footer
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							Success Panel
+							文字統計圖表排名
 						</div>
 						<div class="panel-body" id="graph-01">
 						</div>
 						<div class="panel-footer">
-							Panel Footer
+							熱門關鍵字等
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							圓餅圖
+						</div>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Pie_Chart.PNG
+" alt="圓餅圖" width="300px" height="auto"></img>
+
+						<div class="panel-body" id="graph-02">
+						</div>
+						<div class="panel-footer">
+							其他分析...!?
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- 圖表區第二行 row -->
 			<div class="row">
-				<div class="col-lg-4">
+				<div class="col-lg-8">
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							Info Panel
+							推薦熱門跑點
 						</div>
 						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+							<img src="img/temp-google-route.jpg" width="300px"></img>
 						</div>
 						<div class="panel-footer">
-							Panel Footer
+							<p>將熱門跑點,輸出在地圖上,以選單式+標點,供選擇。 https://developers.google.com/maps/documentation/javascript/examples/streetview-events?hl=zh-tw
+							</p>
+
 						</div>
 					</div>
 				</div>
-				<!-- /.col-lg-4 -->
 				<div class="col-lg-4">
 					<div class="panel panel-warning">
 						<div class="panel-heading">
-							Warning Panel
+							熱門跑點的google 街景
 						</div>
 						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+							<img src="img/temp-google-street-view.jpg" width="100px"></img>
 						</div>
 						<div class="panel-footer">
-							Panel Footer
+							將熱門跑點,輸出在地圖上,供選擇,並在右處提供街景服務,可操作
 						</div>
 					</div>
 				</div>
-				<!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<div class="panel panel-danger">
-						<div class="panel-heading">
-							Danger Panel
-						</div>
-						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-						</div>
-						<div class="panel-footer">
-							Panel Footer
-						</div>
-					</div>
-				</div>
-				<!-- /.col-lg-4 -->
 			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Collapsible Accordion Panel Group
-						</div>
-						<!-- .panel-heading -->
-						<div class="panel-body">
-							<div class="panel-group" id="accordion">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a>
-                                        </h4>
-									</div>
-									<div id="collapseOne" class="panel-collapse collapse in">
-										<div class="panel-body">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-											in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a>
-                                        </h4>
-									</div>
-									<div id="collapseTwo" class="panel-collapse collapse">
-										<div class="panel-body">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-											in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a>
-                                        </h4>
-									</div>
-									<div id="collapseThree" class="panel-collapse collapse">
-										<div class="panel-body">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-											in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- .panel-body -->
-					</div>
-					<!-- /.panel -->
-				</div>
-				<!-- /.col-lg-12 -->
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Basic Tabs
-						</div>
-						<!-- /.panel-heading -->
-						<div class="panel-body">
-							<!-- Nav tabs -->
-							<ul class="nav nav-tabs">
-								<li class=""><a href="#home" data-toggle="tab" aria-expanded="false">Home</a>
-								</li>
-								<li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Profile</a>
-								</li>
-								<li class=""><a href="#messages" data-toggle="tab" aria-expanded="false">Messages</a>
-								</li>
-								<li class="active"><a href="#settings" data-toggle="tab" aria-expanded="true">Settings</a>
-								</li>
-							</ul>
-
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade" id="home">
-									<h4>Home Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade" id="profile">
-									<h4>Profile Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade" id="messages">
-									<h4>Messages Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade active in" id="settings">
-									<h4>Settings Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-						</div>
-						<!-- /.panel-body -->
-					</div>
-					<!-- /.panel -->
-				</div>
-				<!-- /.col-lg-6 -->
-				<div class="col-lg-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Pill Tabs
-						</div>
-						<!-- /.panel-heading -->
-						<div class="panel-body">
-							<!-- Nav tabs -->
-							<ul class="nav nav-pills">
-								<li class="active"><a href="#home-pills" data-toggle="tab">Home</a>
-								</li>
-								<li><a href="#profile-pills" data-toggle="tab">Profile</a>
-								</li>
-								<li><a href="#messages-pills" data-toggle="tab">Messages</a>
-								</li>
-								<li><a href="#settings-pills" data-toggle="tab">Settings</a>
-								</li>
-							</ul>
-
-							<!-- Tab panes -->
-							<div class="tab-content">
-								<div class="tab-pane fade in active" id="home-pills">
-									<h4>Home Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade" id="profile-pills">
-									<h4>Profile Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade" id="messages-pills">
-									<h4>Messages Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-								<div class="tab-pane fade" id="settings-pills">
-									<h4>Settings Tab</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-										irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								</div>
-							</div>
-						</div>
-						<!-- /.panel-body -->
-					</div>
-					<!-- /.panel -->
-				</div>
-				<!-- /.col-lg-6 -->
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Kitchen Sink
-						</div>
-						<!-- /.panel-heading -->
-						<div class="panel-body">
-							<div class="table-responsive">
-								<table class="table table-striped table-bordered table-hover">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>First Name</th>
-											<th>Last Name</th>
-											<th>Username</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- /.table-responsive -->
-						</div>
-						<!-- /.panel-body -->
-					</div>
-					<!-- /.panel -->
-				</div>
-				<!-- /.col-lg-6 -->
-				<div class="col-lg-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							Basic Table
-						</div>
-						<!-- /.panel-heading -->
-						<div class="panel-body">
-							<div class="table-responsive">
-								<table class="table">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>First Name</th>
-											<th>Last Name</th>
-											<th>Username</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- /.table-responsive -->
-						</div>
-						<!-- /.panel-body -->
-					</div>
-					<!-- /.panel -->
-				</div>
-				<!-- /.col-lg-6 -->
-			</div>
-
 		</div>
 	</section>
 
 
+	<section id="group-intro" class="group-intro">
+		<div class="section-topic-color2"></div>
+		<div class="col-lg-12 text-center section-group-intro">
+			<h2>組員介紹</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<img src="img/member_sunny_01.jpg" class="center-block img-circle img-responsive">
+					<h3 class="text-center">Sunny</h3>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<img src="img/member_詩涵_01.jpg" class="center-block img-circle img-responsive">
+					<h3 class="text-center">詩涵</h3>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1">
+					<img src="img/member_jiyu_01.jpg" class="center-block img-circle img-responsive">
+					<h4 class="text-center">Jiyu</h4>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<img src="img/member_amanda_01.jpg" class="center-block img-circle img-responsive">
+					<h3 class="text-center">Amanda</h3>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1">
+					<img src="img/member_crea_01.jpg" class="center-block img-circle img-responsive">
+					<h4 class="text-center">Crea</h4>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<img src="img/member_ryan_01.jpg" class="center-block img-circle img-responsive">
+					<h3 class="text-center">Ryan</h3>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<img src="img/member_shasta_01.jpg" class="center-block img-circle img-responsive">
+					<h3 class="text-center">Shasta</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img src="img/P1190564.JPG" class="center-block img-rounded img-responsive">
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img src="img/P1190561.JPG" class="center-block img-rounded img-responsive">
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<img src="img/P1190558.JPG" class="center-block img-rounded img-responsive">
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<footer>
+		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+	</footer>
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
-	<script src="js/videotest.js"></script>
-
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- map javascript  -->
-	<script type="text/javascript" src="js/TPEarea.geojson"></script>
+	<!-- 首頁影片video js -->
+	<script src="js/videotest.js"></script>
+	<!-- 地圖geojson js -->
+	<script type="text/javascript" src="js/tpeArea.geojson"></script>
 	<script type="text/javascript" src="js/tpeMrt.geojson"></script>
+	<script type="text/javascript" src="js/tpeVillage.geojson"></script>
+	<script type="text/javascript" src="js/tperiverpark.geojson"></script>
+	<!-- 地圖map區 js -->
 	<script type="text/javascript" src="js/map-01.js"></script>
+	<script type="text/javascript" src="js/map-03.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&libraries=places&callback=initAutocomplete" async defer></script>
+	<!-- 地圖search區 js -->
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/google-map-location.js"></script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+	<!-- 圖表graph區 js -->
 	<script type="text/javascript" src="js/graph-01.js"></script>
-	<!-- Custom Theme JavaScript -->
+
+
+	<!-- 內建 JavaScript -->
 	<script>
 		// Closes the sidebar menu
 		$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+		});
+		// Closes the sidebar menu
+		$("#sidebar-wrapper").mouseleave(function(e) {
 			e.preventDefault();
 			$("#sidebar-wrapper").toggleClass("active");
 		});
@@ -579,28 +433,33 @@
 				}
 			}
 		});
-		// Disable Google Maps scrolling
-		// See http://stackoverflow.com/a/25904582/1607849
-		// Disable scroll zooming and bind back the click event
-		var onMapMouseleaveHandler = function(event) {
-			var that = $(this);
-			that.on('click', onMapClickHandler);
-			that.off('mouseleave', onMapMouseleaveHandler);
-			that.find('iframe').css("pointer-events", "none");
-		}
-		var onMapClickHandler = function(event) {
-				var that = $(this);
-				// Disable the click handler until the user leaves the map area
-				that.off('click', onMapClickHandler);
-				// Enable scrolling zoom
-				that.find('iframe').css("pointer-events", "auto");
-				// Handle the mouse leave event
-				that.on('mouseleave', onMapMouseleaveHandler);
-			}
-			// Enable map zooming with mouse scroll when the user clicks the map
-		$('.map').on('click', onMapClickHandler);
+
+
+		//about-info-dislay js
+		$(".about-item-1").hover(function() {
+				$(".about-info-item").hide();
+				$(".about-info-item-1").show();
+				$("#about-sun-item").css("color", "#FFB61E");
+
+			})
+			// https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
+		$(".about-item-2").hover(function() {
+			$(".about-info-item").hide();
+			$(".about-info-item-2").show();
+			$("#about-mark-item").css("color", "#C3272B");
+
+		})
+		$(".about-item-3").hover(function() {
+			$(".about-info-item").hide();
+			$(".about-info-item-3").show();
+			$("#about-air-item").css("color", "#1F4788");
+		})
+		$(".about-item-4").hover(function() {
+			$(".about-info-item").hide();
+			$(".about-info-item-4").show();
+			$("#about-chart-item").css("color", "#26A65B");
+		})
 	</script>
-	</div>
 </body>
 
 </html>
