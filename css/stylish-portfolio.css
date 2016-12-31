@@ -222,13 +222,13 @@ hr.small {
 }
 .about-item-container .about-item:hover {
     opacity: 1;
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    transform: scale(1.3);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
-#about-sun-item, #about-mark-item, #about-air-item, #about-chart-item {
+#about-sun-item, #about-mark-item, #about-air-item, #about-chart-item, #about-shiny-item, #about-conclusion-item {
     color: #6C7A89;
 }
 .title-info{
