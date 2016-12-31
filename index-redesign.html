@@ -32,14 +32,42 @@
     <script src="js/d3.v3.min.js" charset="utf-8"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
     <!-- info -->
     <meta name="ByGroup7" content="CSgroup7">
     <title>台北市慢跑熱點分析</title>
 </head>
 
 <body>
-    <div class="section home-page">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#home-page">慢跑台北</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#title-info">選單區</a></li>
+                    <li><a href="#story-section">慢跑story</a></li>
+                    <li><a href="#air-section">空氣品質</a></li>
+                    <li><a href="#mapService-section">慢跑hot點</a></li>
+                    <li><a href="#dataInfo-section">綜合分析</a></li>
+                    <li><a href="#group-section">小組介紹</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="section home-page" id="home-page">
         <div class="switch-display-01">
             <label id="label-switch" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
           <input type="checkbox" id="switch-1" class="mdl-switch__input" checked="">
@@ -59,12 +87,12 @@
         <img src="img/jog-light-03.svg" class="img-responsive img-light" id="img-light-3">
         <img src="img/jog-light-01.svg" class="img-responsive img-light" id="img-light-4">
     </div>
-    <div class="section title-info">
+    <div class="section title-info" id="title-info">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="row about-item-container">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-1">
                                 <span class="fa-stack fa-5x">
                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -73,22 +101,11 @@
                                 <h4>
                     <strong>慢跑story</strong>
                   </h4>
-                                <p>慢跑的故事，慢跑的好處，慢跑的背景。</p>
+                                <p>為何慢跑?</p>
+                                <a class="btn btn-primary" href="#story-section">更多資訊</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="about-item about-item-2">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
-                  </span>
-                                <h4>
-                    <strong>慢跑HOT點</strong>
-                  </h4>
-                                <p>網路爬蟲得到的資訊整理</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-3">
                                 <span class="fa-stack fa-5x">
                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -98,18 +115,59 @@
                     <strong>空氣品質</strong>
                   </h4>
                                 <p>空氣品質影響慢跑品質。</p>
+                                <a class="btn btn-primary" href="#air-section">更多資訊</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
+                            <div class="about-item about-item-2">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
+                  </span>
+                                <h4>
+                    <strong>慢跑HOT點</strong>
+                  </h4>
+                                <p>跑友推薦/地圖服務</p>
+                                <a class="btn btn-primary" href="#mapService-section">更多資訊</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-4">
                                 <span class="fa-stack fa-5x">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
                   </span>
                                 <h4>
-                    <strong>圖表呈現</strong>
+                    <b>資料呈現</b>
                   </h4>
-                                <p>綜合人口、交通、統計等，圖表呈現。</p>
+                                <p>shiny</p>
+                                <a class="btn btn-primary" href="#dataInfo-section">更多資訊</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6">
+                            <div class="about-item about-item-5">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-thumbs-up fa-stack-1x" id="about-shiny-item"></i>
+                  </span>
+                                <h4>
+                    <strong>綜合<span style="font-weight:500;">分</span>析</strong>
+                  </h4>
+                                <p>重點歸納與推薦</p>
+                                <a class="btn btn-primary" href="#conclusion-section">更多資訊</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6">
+                            <div class="about-item about-item-6">
+                                <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-users fa-stack-1x" id="about-conclusion-item"></i>
+                  </span>
+                                <h4>
+                    <strong>小組介紹</strong>
+                  </h4>
+                                <p>組員與爬蟲影片</p>
+                                <a class="btn btn-primary" href="#group-section">更多資訊</a>
                             </div>
                         </div>
                     </div>
@@ -117,7 +175,28 @@
             </div>
         </div>
     </div>
-    <div class=" section air-section text-center">
+    <div class="section story-section text-center" id="story-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-story-title.png" class="center-block img-responsive" id="img-story-title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>慢跑的介紹</h2>
+                    <h2>慢跑該注意?</h2>
+                    <h2>慢跑該到哪呢?</h2>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section air-section text-center" id="air-section">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center">
@@ -177,32 +256,6 @@
             </div>
         </div>
     </div>
-    <div class="section recommend-section">
-        <img src="img\jog-air-bottom.png" class="img-responsive " id="img-top-01">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <img src="img\img-recommend-title.png" class="center-block img-responsive" id="img-air-title">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">爬蟲結果排名</h2>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <h2 class="text-center">文字雲展示</h2>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="section pop-section">
         <div class="container">
             <div class="row text-center">
@@ -212,11 +265,11 @@
             </div>
         </div>
     </div>
-    <div class="section mapService-section">
+    <div class="section mapService-section" id="mapService-section">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center">
-                    <img src="img\img-mapService-title-02.png" class="center-block img-responsive" id="img-mapService-title">
+                    <img src="img\img-mapService-title-01.png" class="center-block img-responsive" id="img-mapService-title">
                 </div>
             </div>
             <div class="row">
@@ -229,9 +282,71 @@
                     </div>
                 </div>
             </div>
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-mapService-title-02.png" class="center-block img-responsive" id="img-mapService-title-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 text-center map-control-02"></div>
+                            <div class="col-md-8 text-center map-info-02"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="section dataInfo-section" id="dataInfo-section">
+        <img src="img\jog-air-bottom.png" class="img-responsive " id="img-top-01">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-datainfo-title-02.png" class="center-block img-responsive" id="img-datainfo-title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">shiny</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section conclusion-section" id="conclusion-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-conclusion-title-01.png" class="center-block img-responsive" id="img-conclusion-title-01">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">1.為何要挑對時間(說明嚴重性)並提供何時適合跑步。</h2>
+                    <h2 class="text-center">2.台北的哪裡，跑步要特別注意空氣品質問題。</h2>
+                    <h2 class="text-center">3.台北的資源分析。</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section group-section" id="group-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 text-center">
+                    <img src="img\img-group-title.svg" class="center-block img-responsive" id="img-group-title-01">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -245,11 +360,11 @@
     <script type="text/javascript" src="js/tperiverpark.geojson"></script>
     <!-- 地圖map區 js -->
     <script type="text/javascript" src="js/map-01.js"></script>
-    <script type="text/javascript" src="js/map-03.js"></script>
+    <script src="js/map-03.js" type="text/javascript"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
     <!-- 地圖search區 js -->
     <script type="text/javascript" src="js/search.js"></script>
-    <script type="text/javascript" src="js/google-map-location.js"></script>
+    <script src="js/google-map-location.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- 圖表graph區 js -->
     <script type="text/javascript" src="js/graph-01.js"></script>
@@ -258,22 +373,41 @@
     <script type="text/javascript" src="js/img-light-animation.js"></script>
     <!-- snow-js(flurry.js) -->
     <script type="text/javascript" src="js/jquery.flurry.js"></script>
+    <!-- scroll speed -->
+    <script src="js/jquery.nicescroll.js"></script>
     <!-- 內建 JavaScript -->
     <script>
-        // img-title
-        // $(window).scroll(function() {
-        //     $('#img-title').each(function() {
-        //         var imagePos = $(this).offset().top;
-        //
-        //         var topOfWindow = $(window).scrollTop();
-        //         if (imagePos < topOfWindow + 400) {
-        //             $(this).addClass("slideDown");
-        //         }
-        //     });
-        // });
-        // $('#animatedElement').click(function() {
-        //     $(this).addClass("slideUp");
-        // });
+        $(document).ready(function() {
+                $("html").niceScroll();
+            }
+
+        );
+        // navbar
+
+
+
+
+        (function($) {
+            $(document).ready(function() {
+
+                // hide .navbar first
+                $(".navbar").hide();
+
+                // fade in .navbar
+                $(function() {
+                    $(window).scroll(function() {
+
+                        // set distance user needs to scroll before we start fadeIn
+                        if ($(this).scrollTop() > 250) {
+                            $('.navbar').fadeIn();
+                        } else {
+                            $('.navbar').fadeOut();
+                        }
+                    });
+                });
+
+            });
+        }(jQuery));
         // snow effect
         $(document).ready(function() {
             $('.home-page').flurry();
@@ -324,6 +458,8 @@
                 }
             });
         });
+
+
         //#to-top button appears after scrolling
         var fixed = false;
         $(document).scroll(function() {
@@ -386,6 +522,22 @@
                 backgroundColor: "#26A65B"
             }, aboutItemAnimatetime)
             $("#about-chart-item").css("color", "#26A65B");
+        })
+        $(".about-item-5").hover(function() {
+            $(".about-info-item").hide();
+            $(".about-info-item-5").show();
+            $(".title-info").animate({
+                backgroundColor: "#f6bc3a"
+            }, aboutItemAnimatetime)
+            $("#about-shiny-item").css("color", "#f6bc3a");
+        })
+        $(".about-item-6").hover(function() {
+            $(".about-info-item").hide();
+            $(".about-info-item-6").show();
+            $(".title-info").animate({
+                backgroundColor: "#5c067e"
+            }, aboutItemAnimatetime)
+            $("#about-conclusion-item").css("color", "#5c067e");
         })
     </script>
 

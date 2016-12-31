@@ -6853,7 +6853,7 @@ html, body {
 
 .section {
     position: relative;
-    padding: 35px 0;
+    padding: 80px 0;
 }
 
 .section .background-image {
@@ -7123,6 +7123,13 @@ html, body {
 }
 
 
+/* story section*/
+
+#img-story-title {
+    max-height: 150px;
+}
+
+
 /*air-info */
 
 #img-air-title {
@@ -7145,22 +7152,6 @@ html, body {
 }
 
 
-/*air-section-2*/
-
-.recommend-section {
-    background-color: #B1BAC1;
-    position: relative;
-}
-
-#img-top-01 {
-    position: absolute;
-    top: 0px;
-    z-index: 50;
-    height: 15px;
-    width: 200%;
-}
-
-
 /* pop-section */
 
 .pop-section {
@@ -7175,24 +7166,89 @@ html, body {
 
 /* mapService-section */
 
-.mapService-section{
-  background-color: #E6E1DE;
-  position: relative;
+.mapService-section {
+    background-color: #E6E1DE;
+    position: relative;
 }
 
-#img-mapService-title{
-  max-height: 70px;
-  margin-bottom: 20px;
+#img-mapService-title {
+    max-height: 150px;
+    margin-bottom: 20px;
 }
 
-.map-control-01{
-  height: 500px;
-  border: 2px solid black;
-  border-radius: 20px;
+#img-mapService-title-2 {
+    max-height: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.map-info-01{
-  height: 500px;
-  border: 2px solid black;
-  border-radius: 20px;
+.map-control-01 {
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.map-info-01 {
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.map-control-02 {
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.map-info-02 {
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+
+/* datainfo section shiny*/
+
+.dataInfo-section {
+    background-color: #B1BAC1;
+    position: relative;
+}
+
+#img-datainfo-title {
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+#img-top-01 {
+    position: absolute;
+    top: 0px;
+    z-index: 50;
+    height: 15px;
+    width: 200%;
+}
+
+
+/*conclusion-section */
+
+.conclusion-section {
+    background-color: white;
+    position: relative;
+}
+
+#img-conclusion-title-01 {
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+
+/*group section*/
+
+.group-section {
+    background-color: #103E55;
+    position: relative;
+}
+
+#img-group-title-01 {
+    max-height: 200px;
+    margin-bottom: 20px;
 }
