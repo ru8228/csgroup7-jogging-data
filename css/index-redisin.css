@@ -7121,7 +7121,7 @@ html, body {
 }
 
 .air-section {
-    background-color: #E6E1DE;
+    background-color: #bae0ff;
 }
 
 
@@ -7231,6 +7231,10 @@ html, body {
     z-index: 50;
     height: 15px;
     width: 200%;
+}
+#shiny{
+    height:100%;
+    width:100%;
 }
 
 
