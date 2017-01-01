@@ -3249,14 +3249,13 @@ textarea.form-group-lg .form-control, select[multiple].form-group-lg .form-contr
 
 .btn-default {
     color: #000000;
-    background-color: #ffffff;
-    border-color: #cccccc;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
     color: #000000;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+    background-color: rgba(255, 255, 255, 0);
+    border-color:rgba(255, 255, 255, 0);
 }
 
 .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
@@ -6853,7 +6852,7 @@ html, body {
 
 .section {
     position: relative;
-    padding: 80px 0;
+    padding: 50px 0px 30px 0px;
 }
 
 .section .background-image {
@@ -7117,6 +7116,9 @@ html, body {
 .title-info {
     background-color: #C3272B;
 }
+#title-info{
+    padding:50px 0px 20px 0px;
+}
 
 .air-section {
     background-color: #E6E1DE;
@@ -7159,8 +7161,12 @@ html, body {
     position: relative;
 }
 
+#pop-section{
+    padding:10px;
+}
+
 #img-pop-title {
-    max-height: 70px;
+    max-height: 60px;
 }
 
 
