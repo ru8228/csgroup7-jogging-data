@@ -6,6 +6,8 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Preloader Css -->
+    <link href="css/preloader.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Lite -->
@@ -38,15 +40,18 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-jog">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#home-page">慢跑台北</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -87,9 +92,9 @@
     <div class="section home-page" id="home-page">
         <div class="switch-display-01">
             <label id="label-switch" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                    <input type="checkbox" id="switch-1" class="mdl-switch__input" checked="">
-                    <span class="mdl-switch__label"></span>
-                </label>
+                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked="">
+                <span class="mdl-switch__label"></span>
+            </label>
         </div>
         <div class="container">
             <div class="row">
@@ -98,6 +103,7 @@
                 </div>
             </div>
         </div>
+        <img src="img/sun-02.png" class="img-responsive img-sun" id="img-sun">
         <img src="img/jog-grass-night.png" class="img-responsive" id="img-grass">
         <img src="img/jog-light-01.svg" class="img-responsive slideUp " id="img-light-1">
         <img src="img/jog-light-02.svg" class="img-responsive img-light" id="img-light-2">
@@ -112,167 +118,30 @@
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-1">
                                 <a class="btn btn-default" href="#story-section">
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
-
-
-
-
-
-
-
-                    <i class="fa fa-circle fa-stack-2x"></i>
-
-
-
-
-
-
-
-                    <i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
-
-
-
-
-
-
-
-                  </span>
-
-
-
-
-
-
-
-                                    <h4>
-
-
-
-
-
-
-
-                    <strong>慢跑story</strong>
-
-
-
-
-
-
-
-                  </h4>
-
-
-
-
-
-
-
+					                    <i class="fa fa-circle fa-stack-2x"></i>
+					                    <i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
+									</span>
+                                    <h4><strong>慢跑story</strong></h4>
                                     <p>為何慢跑?</p>
-
-
-
-
-
-
-
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-3">
                                 <a class="btn btn-default" href="#air-section">
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
-
-
-
-
-
-
-
-                    <i class="fa fa-circle fa-stack-2x"></i>
-
-
-
-
-
-
-
-                    <i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
-
-
-
-
-
-
-
-                  </span>
-
-
-
-
-
-
-
-                                    <h4>
-
-
-
-
-
-
-
-                    <strong>空氣品質</strong>
-
-
-
-
-
-
-
-                  </h4>
-
-
-
-
-
-
-
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
+									</span>
+                                    <h4><strong>空氣品質</strong></h4>
                                     <p>空氣品質影響慢跑品質。</p>
-
-
-
-
-
-
-
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-2">
                                 <a class="btn btn-default " href="#mapService-section">
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
 
 
@@ -298,13 +167,6 @@
 
 
                   </span>
-
-
-
-
-
-
-
                                     <h4>
 
 
@@ -322,34 +184,13 @@
 
 
                   </h4>
-
-
-
-
-
-
-
                                     <p>跑友推薦/地圖服務</p>
-
-
-
-
-
-
-
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-4">
                                 <a class="btn btn-default" href="#dataInfo-section">
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
 
 
@@ -375,13 +216,6 @@
 
 
                   </span>
-
-
-
-
-
-
-
                                     <h4>
 
 
@@ -399,34 +233,13 @@
 
 
                   </h4>
-
-
-
-
-
-
-
                                     <p>shiny</p>
-
-
-
-
-
-
-
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-5">
                                 <a class="btn btn-default " href="#conclusion-section">
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
 
 
@@ -452,13 +265,6 @@
 
 
                   </span>
-
-
-
-
-
-
-
                                     <h4>
 
 
@@ -476,44 +282,13 @@
 
 
                   </h4>
-
-
-
-
-
-
-
                                     <p>重點歸納與推薦</p>
-
-
-
-
-
-
-
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <a class="btn btn-default " href="#group-section">
-
-
-
-
-
-
-
                                 <div class="about-item about-item-6">
-
-
-
-
-
-
-
-
-
-
                                     <span class="fa-stack fa-5x">
 
 
@@ -539,13 +314,6 @@
 
 
                   </span>
-
-
-
-
-
-
-
                                     <h4>
 
                     <strong>小組介紹</strong>
@@ -557,32 +325,8 @@
 
 
                   </h4>
-
-
-
-
-
-
-
                                     <p>組員與爬蟲影片</p>
-
-
-
-
-
-
-
-
-
-
                                 </div>
-
-
-
-
-
-
-
                             </a>
                         </div>
                     </div>
@@ -604,10 +348,14 @@
                             <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive img-rounded">
                         </div>
                         <div class="col-md-6">
-                            <h3 class="">慢跑的介紹</h3>
-                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                                <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                                <br>Ut enim ad minim veniam, quis nostrud</p>
+                            <h3 class="">慢跑-都市男女的健康浪漫</h3>
+                            <p class="">慢跑亦稱為緩步、緩跑或緩步跑，是一種有氧運動
+                                <br> 目的在以較慢或中等的節奏來跑完一段相對較長的距離
+                                <br>以達到熱身或鍛鍊的目的
+                                <br>
+                                <br> 大多數高水平的運動員，都以慢跑來做熱身
+                                <br> 在歐美國家，尤其是在美國，澳洲和德國
+                                <br>慢跑是一項極為普及的運動~ </p>
                         </div>
                     </div>
                     <div class="row">
@@ -628,18 +376,20 @@
                             <img src="img\bg-3.jpg" class="img-responsive img-rounded">
                         </div>
                         <div class="col-md-6">
-                            <h3 class="text-left">慢跑的介紹</h3>
-                            <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                                <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                                <br>Ut enim ad minim veniam, quis nostrud</p>
+                            <h3 class="text-left">慢跑-都市男女的健康浪漫</h3>
+                            <p class="text-left">慢跑亦稱為緩步、緩跑或緩步跑，是一種有氧運動
+                                <br> 目的在以較慢或中等的節奏來跑完一段相對較長的距離
+                                <br>以達到熱身或鍛鍊的目的
+                                <br>
+                                <br> 大多數高水平的運動員，都以慢跑來做熱身
+                                <br> 在歐美國家，尤其是在美國，澳洲和德國
+                                <br>慢跑是一項極為普及的運動~ </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <h3 class="text-right">慢跑該注意?</h3>
-                            <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                                <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                                <br>Ut enim ad minim veniam, quis nostrud</p>
+                            <p class="text-right"></p>
                         </div>
                         <div class="col-md-6">
                             <img src="img\bg.jpg" class="img-responsive img-rounded">
@@ -969,6 +719,15 @@
     <script src="js/jquery.nicescroll.js"></script>
     <!-- 內建 JavaScript -->
     <script>
+        $(window).on('load', function() { // makes sure the whole site is loaded
+            $('#loader').fadeOut(); // will first fade out the loading animation
+            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({
+                'overflow': 'visible'
+            });
+        })
+
+
         $(document).ready(function() {
                 $("html").niceScroll();
             }
@@ -1127,8 +886,6 @@
             $("#about-conclusion-item").css("color", "#5c067e");
         })
     </script>
-
-
 </body>
 
 </html>
