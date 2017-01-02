@@ -7173,28 +7173,7 @@ html, body {
     padding:50px 0px 20px 0px;
 }
 
-.air-section {
-    background-color: #bae0ff;
-}
-
-
-/* story section*/
-
-#img-story-title {
-    max-height: 150px;
-}
-
-
 /*air-info */
-
-#img-air-title {
-    max-height: 150px;
-}
-
-#img-air-title-2 {
-    max-height: 70px;
-    margin-top: 20px;
-}
 
 .air-info-1 {
     height: 500px;
@@ -7207,39 +7186,7 @@ html, body {
 }
 
 
-/* pop-section */
-
-.pop-section {
-    background-color: #282D33;
-    position: relative;
-}
-
-#pop-section{
-    padding:10px;
-}
-
-#img-pop-title {
-    max-height: 60px;
-}
-
-
 /* mapService-section */
-
-.mapService-section {
-    background-color: #E6E1DE;
-    position: relative;
-}
-
-#img-mapService-title {
-    max-height: 150px;
-    margin-bottom: 20px;
-}
-
-#img-mapService-title-2 {
-    max-height: 70px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
 
 .map-control-01 {
     height: 500px;
@@ -7266,17 +7213,7 @@ html, body {
 }
 
 
-/* datainfo section shiny*/
-
-.dataInfo-section {
-    background-color: #B1BAC1;
-    position: relative;
-}
-
-#img-datainfo-title {
-    max-height: 150px;
-    margin-bottom: 20px;
-}
+/* shiny section*/
 
 #img-top-01 {
     position: absolute;
@@ -7285,6 +7222,7 @@ html, body {
     height: 15px;
     width: 200%;
 }
+
 #shiny{
     height:100%;
     width:100%;
@@ -7293,25 +7231,96 @@ html, body {
 
 /*conclusion-section */
 
+
+/*group section*/
+.group-member {
+    color:#FFF;
+}
+
+.group-section h3 {
+    padding-top:20px;
+}
+
+/*footer-section*/
+#footer-title-01{
+    color:#FFF;
+}
+.footer-icon-class{
+    padding-top:30px;
+}
+#footer-word-01{
+    color:#FFF;
+}
+
+#footer-groupimage{
+    max-height: 100px;
+    margin:0 15% 0 10%;
+}
+#footer-icon-normal{
+
+}
+#footer-icon-xs{
+    margin-bottom: 30px;
+}
+
+/* section background-color*/
+.story-section{
+    background-color:#FFF;
+}
+
+.air-section {
+    background-color: #d0e5eb;
+}
+
+.pop-section {
+    background-color: #282D33;
+    position: relative;
+    padding:10px;
+}
+
+.mapService-section {
+    background-color: #FFF;
+    position: relative;
+}
+
+.shiny-section {
+    background-color: #103E55;
+    position: relative;
+}
+
 .conclusion-section {
     background-color: white;
     position: relative;
 }
-
-#img-conclusion-title-01 {
-    max-height: 150px;
-    margin-bottom: 20px;
-}
-
-
-/*group section*/
 
 .group-section {
     background-color: #103E55;
     position: relative;
 }
 
-#img-group-title-01 {
-    max-height: 200px;
-    margin-bottom: 20px;
+.footer-section{
+  background-color: black;
+}
+
+
+/* title-image*/
+.title-image{
+    max-height:60px;
+    margin-bottom: 30px;
+}
+
+#img-pop-title {
+    max-height: 60px;
+}
+#img-mapService-title-02{
+    margin-top: 30px;
+}
+#img-group-title-01{
+    height:100px;
+}
+
+/*img-circle*/
+.img-circle{
+    margin:10px;
+    padding:5px;
 }
