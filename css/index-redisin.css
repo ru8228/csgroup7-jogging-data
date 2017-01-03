@@ -7216,14 +7216,16 @@ html, body {
 
 .map-control-02 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+    padding:20px;
+/*     border: 2px solid black;
+    border-radius: 20px; */
 }
 
 .map-info-02 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+/*     border: 2px solid black;
+    border-radius: 20px; */
+    padding: 20px;
 }
 
 
