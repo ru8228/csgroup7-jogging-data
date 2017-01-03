@@ -7179,8 +7179,9 @@ html, body {
 
 .air-info-1 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+    /*border: 2px solid black;
+    border-radius: 20px;*/
+    padding:30px;
 }
 
 .slide-bar-01 {
@@ -7189,17 +7190,28 @@ html, body {
 
 
 /* mapService-section */
+#map-recommend{
+  height:100%;
+  width:100%;
+}
+#street-view{
+  height:100%;
+  width:100%;
+}
+
 
 .map-control-01 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+    /*border: 2px solid black;
+    border-radius: 20px;*/
+    padding:20px;
 }
 
 .map-info-01 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+    /*border: 2px solid black;
+    border-radius: 20px;*/
+    padding:20px;
 }
 
 .map-control-02 {

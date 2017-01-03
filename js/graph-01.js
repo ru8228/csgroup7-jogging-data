@@ -1,6 +1,6 @@
 //画布大小
-var width = 300;
-var height = 300;
+var width = 450;
+var height = 450;
 
 //在 body 里添加一个 SVG 画布
 var svg = d3.select("#graph-01")
