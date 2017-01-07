@@ -7185,7 +7185,14 @@ html, body {
 .slide-bar-01 {
     margin-top: 20px;
 }
-
+#title-info-2{
+    display: block;
+    position: relative;
+    bottom:0px;
+    z-index: 300;
+    margin:auto;
+    margin-top:100px;
+}
 /* story-section*/
 #story-01{
 }
@@ -7283,7 +7290,7 @@ html, body {
 
 /* section background-color*/
 .story-section{
-    background-color:#FFF;
+    background-color:#E6E1DE;
 
 }
 
