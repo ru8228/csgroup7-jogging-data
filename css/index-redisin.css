@@ -7139,11 +7139,9 @@ html, body {
 
 #img-title {
     min-height: 250px;
-    visibility: hidden;
 }
 
 #img-light-1 {
-    visibility: hidden;
     position: absolute;
     min-height: 200px;
     right: 10%;
@@ -7188,15 +7186,19 @@ html, body {
     margin-top: 20px;
 }
 
-
+/* story-section*/
+#story-01{
+}
 /* mapService-section */
 #map-recommend{
   height:100%;
   width:100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #street-view{
   height:100%;
   width:100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -7216,14 +7218,16 @@ html, body {
 
 .map-control-02 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+    padding:20px;
+/*     border: 2px solid black;
+    border-radius: 20px; */
 }
 
 .map-info-02 {
     height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+/*     border: 2px solid black;
+    border-radius: 20px; */
+    padding: 20px;
 }
 
 
@@ -7280,6 +7284,7 @@ html, body {
 /* section background-color*/
 .story-section{
     background-color:#FFF;
+
 }
 
 .air-section {

@@ -1,5 +1,5 @@
 //1.設定主要的地圖div id , 地圖中心點顯示位置
-var map = L.map('map').setView([25.087818, 121.538607], 11);
+var map = L.map('map-leaflet').setView([25.087818, 121.538607], 11);
 //2.token跟，下方的提供者來源，記得要改
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
     maxZoom: 18,
