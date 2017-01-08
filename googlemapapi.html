@@ -146,10 +146,7 @@
                 lat: ori_lat,
                 lng: ori_lng
             };
-            var des = {
-                lat: des_lat,
-                lng: des_lng
-            };
+            
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: ori,
                 scrollwheel: false,
@@ -158,6 +155,10 @@
             var directionsDisplay = new google.maps.DirectionsRenderer({
                 map: map
             });
+            var des = {
+                lat: des_lat,
+                lng: des_lng
+            };
             // Set destination, origin and travel mode.
             var request = {
                 destination: des,
@@ -175,7 +176,11 @@
                     var Distance=route.legs[0].distance.text;
                     // 取得路徑大約時間
                     var Duration=route.legs[0].duration.text;
+                    
                     document.getElementById('msg').innerHTML = Distance + ', ' + Duration ;
+                    var splitdu = Duration.split(" ");
+                    var mins = splitdu[0]*60+Number(splitdu[2]);
+                    alert(mins);
                 }
             });
             
