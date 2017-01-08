@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/aos.css">
-     <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/bar.css">
     <!-- Custom CSS -->
     <link href="css/videotest.css" rel="stylesheet">
     <link href="css/graph-01.css" rel="stylesheet">
@@ -350,45 +350,74 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i>空氣品質介紹(12月當中 折線圖)</h3>
+                    <h3 data-aos="fade-up"><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i>適合跑步的時間有多少!?</h3>
+
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1">
-                            <!-- <div id="graph-01"></div> -->
+                        <div class="col-md-4 text-center air-info-1" data-aos="fade-right">
+                            <h3>空氣差的一天</h3>
+                            <p>
+                                『咳咳咳...』在12/21這天，台北的空氣品質好糟:(
+                                <br> 這一天當中...有多少的時間適合跑步呢?
+                            </p>
+                            <div id="pieChart-01"></div>
+                            <p>
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，只有45%的時間是可以跑步的
+                            </p>
+                            <div id="pieChart-02"></div>
+                            <p>
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，只有45%的時間是可以跑步的
+                            </p>
+                        </div>
+                        <hr class="style13 hidden-lg hidden-md hidden-sm">
+                        <div class="col-md-4 text-center air-info-1" data-aos="fade-left">
+                            <h3>空氣好的一天</h3>
+                            <p>
+                                哇哈哈哈~~氣象預報中~今天空氣品質不錯呢
+                                <br> 那有多少的時間適合跑步呢~~~?
+                            </p>
+                            <div id="pieChart-03"></div>
+                            <p>
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，全天都非常適合跑步呢!
+                            </p>
+                            <div id="pieChart-04"></div>
+                            <p>
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，全天都非常適合跑步呢!
+                            </p>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8 text-center slide-bar-01">
+                          <p>PM2.5空氣指標及顏色分類，參考環境保護署之定義。</p>
+                          <p>請參考<a href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a></p>
+
+                      </div>
+                      <div class="col-md-2"></div>
+                    </div>
+                    <!-- <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8 text-center slide-bar-01">
-                            <!-- Slider -->
+
                             <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
 
                         </div>
                         <div class="col-md-2"></div>
-                    </div>
+                    </div> -->
 
                     <h3><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i> 空氣品質介紹2(12月當中 一天裡面有多少是可以跑步的)</h3>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8 text-center air-info-1">
-                          <!-- <div id="pieChart-01" class="chart"></div> -->
-                          <div id="pieChart-01"></div>
+                            <!-- <div id="pieChart-01" class="chart"></div> -->
+
                         </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8 text-center slide-bar-01">
-                          <p>PM2.5空氣指標及顏色分類，參考環境保護署之定義。</p>
-                          <p>請參考<a href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a></p>
-                            <!-- Slider -->
-                            <!-- <input class="mdl-slider mdl-js-slider" type="range" min="1" max="12" value="12" tabindex="0" oninput="showMessage(this.value)" onchange="showMessage(this.value)">
-                            <div id="message">
-                                <p>您選擇的月份是：<span id="bar-value-02">12</span>月</p>
-                                <p>PM2.5空氣指標及顏色分類，參考環境保護署之定義。</p>
-                                <p>請參考<a href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a></p>
-                            </div> -->
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -539,45 +568,45 @@
                 <div class="col-md-12">
                     <h2 class="text-center">1.為何要挑對時間(說明嚴重性)並提供何時適合跑步。</h2>
                     <h3 class="text-center">PM2.5每增加10</h3>
-                                            <ul id="skills">	
-                            <li>
-                                <span>肺癌</span>
-                                <span id="j">↑12%</span>
-                                <div class="bar_container">
-                                    <span class="bar" data-bar='{ "color": "#19f" }'>
+                    <ul id="skills">
+                        <li>
+                            <span>肺癌</span>
+                            <span id="j">↑12%</span>
+                            <div class="bar_container">
+                                <span class="bar" data-bar='{ "color": "#19f" }'>
                                         <span class="pct">60%</span>
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <span>缺血心臟病</span>
-                                <span id="j">↑16%</span>
-                                <div class="bar_container">
-                                    <span class="bar" data-bar='{ "color": "#27ae60", "delay": 600 }'>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>缺血心臟病</span>
+                            <span id="j">↑16%</span>
+                            <div class="bar_container">
+                                <span class="bar" data-bar='{ "color": "#27ae60", "delay": 600 }'>
                                         <span class="pct">80%</span>
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <span>心肺疾病</span>
-                                 <span id="j">↑10%</span>
-                                <div class="bar_container">
-                                    <span class="bar" data-bar='{ "color": "#9b59b6", "delay": 1200 }'>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>心肺疾病</span>
+                            <span id="j">↑10%</span>
+                            <div class="bar_container">
+                                <span class="bar" data-bar='{ "color": "#9b59b6", "delay": 1200 }'>
                                         <span class="pct">50%</span>
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <span>死亡率</span>
-                                 <span id="j">↑5%</span>
-                                <div class="bar_container">
-                                    <span class="bar" data-bar='{ "color": "#ae8a33", "delay": 1800 }'>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <span>死亡率</span>
+                            <span id="j">↑5%</span>
+                            <div class="bar_container">
+                                <span class="bar" data-bar='{ "color": "#ae8a33", "delay": 1800 }'>
                                         <span class="pct">25%</span>
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                        <h4 class="text-center">資料來源:立法院公報</h4>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <h4 class="text-center">資料來源:立法院公報</h4>
                     <h2 class="text-center">2.台北的哪裡，跑步要特別注意空氣品質問題。</h2>
                     <h2 class="text-center">3.台北的資源分析。</h2>
                 </div>
@@ -718,12 +747,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- 圖表graph區 js -->
     <script type="text/javascript" src="js/graph-01.js"></script>
-<<<<<<< HEAD
     <!-- <script type="text/javascript" src="js/graph-02.js"></script> -->
-=======
-    <script type="text/javascript" src="js/graph-02.js"></script>
     <script type="text/javascript " src="js/bar2.js "></script>
->>>>>>> origin/master
     <!-- 動畫js -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/img-light-animation.js" type="text/javascript"></script>
@@ -733,8 +758,11 @@
     <script src="js/jquery.nicescroll.js"></script>
     <script src="js/aos.js"></script>
     <!-- cnavaschart.js -->
-    <script src="js/canvasjs.min.js"></script>
+    <script src="js/d3pie.min.js"></script>
     <script src="js/piechart01.js"></script>
+    <script src="js/piechart02.js"></script>
+    <script src="js/piechart03.js"></script>
+    <script src="js/piechart04.js"></script>
     <!-- 內建 JavaScript -->
     <script>
 

@@ -1,11 +1,11 @@
-var pie = new d3pie("pieChart-01", {
+var pie = new d3pie("pieChart-04", {
 	"header": {
 		"title": {
-			"text": "20161221",
+			"text": "20161204",
 			"fontSize": 21,
 		},
 		"subtitle": {
-			"text": "古亭測站資料",
+			"text": "板橋測站資料",
 			"color": "#907d7d",
 			"fontSize": 12,
 		},
@@ -32,55 +32,11 @@ var pie = new d3pie("pieChart-01", {
 		},
 		"content": [
 			{
-				"label": "濃度:0-11",
-				"value": 5,
-				"color": "#b2fba8"
+				"label": "濃度:0-35",
+				"value": 24,
+				"color": "#67de57"
 			},
-			{
-				"label": "濃度:12-23",
-				"value": 3,
-				"color": "#49eb28"
-			},
-			{
-				"label": "濃度:24-35",
-				"value": 1,
-				"color": "#04b12f"
-			},
-			{
-				"label": "濃度:36-41",
-				"value": 0,
-				"color": "#f2ff03"
-			},
-			{
-				"label": "濃度:42-47",
-				"value": 2,
-				"color": "#ffc929"
-			},
-			{
-				"label": "濃度:48-53",
-				"value": 3,
-				"color": "#ff9100"
-			},
-			{
-				"label": "濃度:54-58",
-				"value": 1,
-				"color": "#fd6b78"
-			},
-			{
-				"label": "濃度:59-64",
-				"value": 1,
-				"color": "#ff2929"
-			},
-			{
-				"label": "濃度:65-70",
-				"value": 3,
-				"color": "#c00c0c"
-			},
-			{
-				"label": "濃度: >71",
-				"value": 1,
-				"color": "#b317b2"
-			}
+
 		]
 	},
 	"labels": {
