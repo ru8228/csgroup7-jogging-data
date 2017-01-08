@@ -26,18 +26,19 @@
     <link href="css/index-redisin.css" rel="stylesheet" type="text/css">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css">
-    <!-- leaflet css & js -->
-    <link href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" rel="stylesheet">
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <!-- d3 js -->
-    <script src="js/d3.v3.min.js" charset="utf-8"></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- info -->
-    <meta name="ByGroup7" content="CSgroup7">
-    <title>台北市慢跑熱點分析</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+        <link href="https://fonts.googleapis.com/earlyaccess/cwtexhei.css" rel="stylesheet" type="text/css">
+        <!-- leaflet css & js -->
+        <link href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" rel="stylesheet">
+        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+        <!-- d3 js -->
+        <script src="js/d3.v3.min.js" charset="utf-8"></script>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <!-- info -->
+        <meta name="ByGroup7" content="CSgroup7">
+        <title>台北市慢跑熱點分析</title>
 </head>
 
 <body>
@@ -214,7 +215,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img\bg.jpg" class="img-responsive img-rounded" >
+                            <img src="img\bg.jpg" class="img-responsive img-rounded">
                         </div>
                         <div class="col-md-6" data-aos="zoom-out">
                             <h3 class="">慢跑該注意?</h3>
@@ -261,7 +262,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center" data-aos="fade-up">
-                    <img src="img\img-air-title-final.png"  class="center-block img-responsive title-image" id="img-air-title">
+                    <img src="img\img-air-title-final.png" class="center-block img-responsive title-image" id="img-air-title">
                     <p>空氣當中的汙染物等，對敏感...健康..造成影響，那到底一整天當中，適合跑步的時間到底有多少呢?</p>
                 </div>
             </div>
@@ -335,7 +336,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center" data-aos="fade-up">
-                    <img src="img\img-mapService-title-final.png"  class="center-block img-responsive title-image" id="img-mapService-title">
+                    <img src="img\img-mapService-title-final.png" class="center-block img-responsive title-image" id="img-mapService-title">
                     <p>台北跑友們最熱愛的跑步地點，究竟有什麼迷人之處?</p>
                 </div>
             </div>
@@ -374,36 +375,46 @@
                                         if (v == "大安") {
                                             v = "大安森林公園";
                                         }
-                                        var givealert = ["良好!非常適合戶外活動，出門跑跑步吧:D", "普通!可以正常戶外活動，但極敏感族群可能會產生呼吸急促和咳嗽喔:)", "對敏感族群不健康!今天空氣不是很好，一般跑友應該考慮減少戶外活動，且避免長時間的劇烈運動1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議減少體力消耗活動及戶外活動，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:|",
+                                        var givealert = ["良好!非常適合戶外活動，出門跑跑步吧:D", "普通!可以正常戶外活動，但極敏感族群可能會產生呼吸急促和咳嗽喔:)",
+                                            "對敏感族群不健康!今天空氣不是很好，一般跑友應該考慮減少戶外活動，且避免長時間的劇烈運動1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議減少體力消耗活動及戶外活動，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:|",
                                             "對所有族群不健康!今天空氣不太好，應該特別減少體力消耗，尤其是在室外喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(",
                                             "非常不健康!今天空氣很差，應該盡可能減少戶外活動!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(",
                                             "危險!今天空氣超級糟，要盡可能避免所有戶外活動喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(((("
                                         ];
                                         alert(v);
-                                        $.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" + document.getElementById("search_location").value, function(
-                                            json) {
-                                            console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" + v);
-                                            var e = json.feed.entry,
-                                                l = e.length,
-                                                searchresult = "",
-                                                entry, i, area, location, station, comment, temperature, rain, AQI, PM2, AQI_affect, PM2_5_affect
-                                            for (i = 0; i < l; i++) {
-                                                entry = e[i];
-                                                area = entry.gsx$area.$t;
-                                                location = entry.gsx$location.$t;
-                                                station = entry.gsx$station.$t;
-                                                comment = entry.gsx$comment.$t;
-                                                temperature = entry.gsx$temperature.$t;
-                                                rain = entry.gsx$rain.$t;
-                                                aqi = entry.gsx$aqi.$t;
-                                                pm25 = entry.gsx$pm25.$t;
-                                                aqiaffect = entry.gsx$aqiaffect.$t;
-                                                // html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
-                                                searchresult += "<br/>" + "目前溫度: " + temperature + "<br/>" + "降雨機率: " + rain + "%" + "<br/>" + "AQI空氣汙染指標: " + aqi + "<br/>" + "PM2.5: " + pm25 + "<br/>" + givealert[aqiaffect - 1] +
-                                                    "<br/><br/>跑友這麼說...<br/>" + comment + "let's run";
-                                            }
-                                            document.getElementById("test").innerHTML = searchresult;
-                                        });
+                                        $.getJSON(
+                                            "https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" +
+                                            document.getElementById("search_location").value,
+                                            function (
+                                                json) {
+                                                console.log(
+                                                    "https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" +
+                                                    v);
+                                                var e = json.feed.entry,
+                                                    l = e.length,
+                                                    searchresult = "",
+                                                    entry, i, area, location, station, comment, temperature, rain,
+                                                    AQI, PM2, AQI_affect, PM2_5_affect
+                                                for (i = 0; i < l; i++) {
+                                                    entry = e[i];
+                                                    area = entry.gsx$area.$t;
+                                                    location = entry.gsx$location.$t;
+                                                    station = entry.gsx$station.$t;
+                                                    comment = entry.gsx$comment.$t;
+                                                    temperature = entry.gsx$temperature.$t;
+                                                    rain = entry.gsx$rain.$t;
+                                                    aqi = entry.gsx$aqi.$t;
+                                                    pm25 = entry.gsx$pm25.$t;
+                                                    aqiaffect = entry.gsx$aqiaffect.$t;
+                                                    // html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
+                                                    searchresult += "<br/>" + "目前溫度: " + temperature + "<br/>" +
+                                                        "降雨機率: " + rain + "%" + "<br/>" + "AQI空氣汙染指標: " + aqi +
+                                                        "<br/>" + "PM2.5: " + pm25 + "<br/>" + givealert[aqiaffect -
+                                                            1] +
+                                                        "<br/><br/>跑友這麼說...<br/>" + comment + "let's run";
+                                                }
+                                                document.getElementById("test").innerHTML = searchresult;
+                                            });
                                     }
                                 </script>
                                 <!-- <p>時間</p>
@@ -513,9 +524,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h2 class="text-center">教學影片</h1>
-                                    <p class="text-center">影片題目：
-                                        <br>影片內容是....
-                                        <br>運用技術...</p>
+                                        <p class="text-center">影片題目：
+                                            <br>影片內容是....
+                                            <br>運用技術...</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -540,7 +551,6 @@
                     <h1 class="text-center footer-word" id="footer-title-01">台北市慢跑熱點分析</h1>
                     <p class="text-center footer-word" id="footer-word-01">運用資料,跑出健康。運用地圖，跑對地方。</p>
                 </div>
-
                 <div class="col-sm-4">
                     <div class="row">
                         <div class="col-md-12 hidden-xs text-center footer-icon-class" id="footer-icon-normal">
@@ -597,28 +607,27 @@
     <!-- 內建 JavaScript -->
     <script>
         AOS.init({
-          duration: 1200,
+            duration: 1200,
         });
 
-        $(window).on('load', function() { // makes sure the whole site is loaded
+        $(window).on('load', function () { // makes sure the whole site is loaded
             $('#loader').fadeOut(); // will first fade out the loading animation
             $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
             $('body').delay(350).css({
                 'overflow': 'visible'
             });
         })
-        $(document).ready(function() {
-                $("html").niceScroll();
-            }
-        );
+        $(document).ready(function () {
+            $("html").niceScroll();
+        });
         // navbar
-        (function($) {
-            $(document).ready(function() {
+        (function ($) {
+            $(document).ready(function () {
                 // hide .navbar first
                 $(".navbar").hide();
                 // fade in .navbar
-                $(function() {
-                    $(window).scroll(function() {
+                $(function () {
+                    $(window).scroll(function () {
                         // set distance user needs to scroll before we start fadeIn
                         if ($(this).scrollTop() > 250) {
                             $('.navbar').fadeIn();
@@ -630,11 +639,11 @@
             });
         }(jQuery));
         // snow effect
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.home-page').flurry();
         });
         //switch-button change theme
-        $('#switch-1').change(function() {
+        $('#switch-1').change(function () {
             if (this.checked) {
                 $(".home-page").css("background-color", "#103E55");
                 $("#img-title").attr("src", "img/jog-title-night.svg");
@@ -648,25 +657,26 @@
             }
         });
         // Closes the sidebar menu
-        $("#menu-close").click(function(e) {
+        $("#menu-close").click(function (e) {
             e.preventDefault();
             $("#sidebar-wrapper").toggleClass("active");
         });
         // Closes the sidebar menu
-        $("#sidebar-wrapper").mouseleave(function(e) {
+        $("#sidebar-wrapper").mouseleave(function (e) {
             e.preventDefault();
             $("#sidebar-wrapper").toggleClass("active");
         });
         // Opens the sidebar menu
-        $("#menu-toggle").click(function(e) {
+        $("#menu-toggle").click(function (e) {
             e.preventDefault();
             $("#sidebar-wrapper").toggleClass("active");
         });
 
         // Scrolls to the selected menu item on the page
-        $(function() {
-            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+        $(function () {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
+                    location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
@@ -680,12 +690,12 @@
         });
         //#to-top button appears after scrolling
         var fixed = false;
-        $(document).scroll(function() {
+        $(document).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 if (!fixed) {
                     fixed = true;
                     // $('#to-top').css({position:'fixed', display:'block'});
-                    $('#to-top').show("slow", function() {
+                    $('#to-top').show("slow", function () {
                         $('#to-top').css({
                             position: 'fixed',
                             display: 'block'
@@ -695,7 +705,7 @@
             } else {
                 if (fixed) {
                     fixed = false;
-                    $('#to-top').hide("slow", function() {
+                    $('#to-top').hide("slow", function () {
                         $('#to-top').css({
                             display: 'none'
                         });
@@ -705,17 +715,16 @@
         });
         var aboutItemAnimatetime = 150;
         //about-info-dislay js
-        $(".about-item-1").hover(function() {
-                $(".about-info-item").hide();
-                $(".about-info-item-1").show();
-                $(".title-info").animate({
-                    backgroundColor: "#FFB61E"
-                }, aboutItemAnimatetime);
-                $("#about-sun-item").css("color", "#FFB61E"
-              );
-            })
-            // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
-        $(".about-item-2").hover(function() {
+        $(".about-item-1").hover(function () {
+            $(".about-info-item").hide();
+            $(".about-info-item-1").show();
+            $(".title-info").animate({
+                backgroundColor: "#FFB61E"
+            }, aboutItemAnimatetime);
+            $("#about-sun-item").css("color", "#FFB61E");
+        })
+        // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
+        $(".about-item-2").hover(function () {
             $(".about-info-item").hide();
             $(".about-info-item-2").show();
             $(".title-info").animate({
@@ -723,7 +732,7 @@
             }, aboutItemAnimatetime)
             $("#about-mark-item").css("color", "#C3272B");
         })
-        $(".about-item-3").hover(function() {
+        $(".about-item-3").hover(function () {
             $(".about-info-item").hide();
             $(".about-info-item-3").show();
             $(".title-info").animate({
@@ -731,7 +740,7 @@
             }, aboutItemAnimatetime)
             $("#about-air-item").css("color", "#1F4788");
         })
-        $(".about-item-4").hover(function() {
+        $(".about-item-4").hover(function () {
             $(".about-info-item").hide();
             $(".about-info-item-4").show();
             $(".title-info").animate({
@@ -739,7 +748,7 @@
             }, aboutItemAnimatetime)
             $("#about-chart-item").css("color", "#26A65B");
         })
-        $(".about-item-5").hover(function() {
+        $(".about-item-5").hover(function () {
             $(".about-info-item").hide();
             $(".about-info-item-5").show();
             $(".title-info").animate({
@@ -747,7 +756,7 @@
             }, aboutItemAnimatetime)
             $("#about-shiny-item").css("color", "#f6bc3a");
         })
-        $(".about-item-6").hover(function() {
+        $(".about-item-6").hover(function () {
             $(".about-info-item").hide();
             $(".about-info-item-6").show();
             $(".title-info").animate({
@@ -756,50 +765,111 @@
             $("#about-conclusion-item").css("color", "#f791f3");
         })
     </script>
-    <script>
-        //google地圖 #map-recommened
-        var map;
-        function initMap() {
-            var myLatLng = {
-                lat: 25.016754,
-                lng: 121.533701
-            };
-            var map = new google.maps.Map(document.getElementById('map-recommend'), {
-                center: {
-                    lat: 25.016754,
-                    lng: 121.533701
-                },
-                scrollwheel: false,
-                zoom: 8
-            });
-            // Create a marker and set its position.
-            var marker = new google.maps.Marker({
-                        map: map,
-                        position: myLatLng,
-                        title: 'Hello World!'
-                    })
-                  }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6wyswnvKuR00T4u3uqN2BDNB--6q5lU&callback=initMap" async defer></script>
-    <script>
-        //街景api #street-view
-        var panorama;
-        function initialize() {
-            panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('street-view'), {
-                    position: {
-                        lat: 25.016754,
-                        lng: 121.533701
-                    },
-                    pov: {
-                        heading: 65,
-                        pitch: 0
-                    },
-                    zoom: 1
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6wyswnvKuR00T4u3uqN2BDNB--6q5lU&callback=initMap" async
+        defer></script>
+        <script>
+            //街景api #street-view
+            var panorama;
+
+            function initialize() {
+                var LatLng1 = {
+                    lat: 24.9877249,
+                    lng: 121.5591697
+                }; //木柵公園
+                var LatLng2 = {
+                    lat: 25.0293227,
+                    lng: 121.5359793
+                }; //大安森林公園
+                var LatLng3 = {
+                    lat: 25.0346522,
+                    lng: 121.52182649999997
+                };
+                var taida = {
+                    lat: 25.0169587,
+                    lng: 121.5338507
+                }; //ntu
+
+                panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng2,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+                //recommend map
+
+                var map = new google.maps.Map(document.getElementById('map-recommend'), {
+                    zoom: 12,
+                    center: LatLng2
                 });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&signed_in=true&callback=initialize"></script>
+
+                var marker1 = new google.maps.Marker({
+                    position: LatLng1,
+                    map: map,
+                    title: "木柵公園"
+                });
+                var marker2 = new google.maps.Marker({
+                    position: LatLng2,
+                    map: map,
+                    title: "大安森林公園"
+                });
+                var marker3 = new google.maps.Marker({
+                    position: LatLng3,
+                    map: map,
+                    title: "台灣民主紀念園區"
+                });
+                //marker clicker
+                map.addListener('center_changed', function () {
+                    // 3 seconds after the center of the map has changed, pan back to the
+                    // marker.
+                    window.setTimeout(function () {
+                        map.panTo(marker3.getPosition());
+                    }, 3000);
+                });
+                marker1.addListener('click', function () {
+                    map.setZoom(12);
+                    map.setCenter(marker1.getPosition());
+                    panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng1,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+                });
+                marker2.addListener('click', function () {
+                    map.setZoom(12);
+                    map.setCenter(marker2.getPosition());
+                    panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng2,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+                });
+                marker3.addListener('click', function () {
+                    map.setZoom(12);
+                    map.setCenter(marker3.getPosition());
+                    panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng3,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&signed_in=true&callback=initialize"></script>
 </body>
 
 </html>
