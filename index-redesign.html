@@ -6,6 +6,8 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Preloader Css -->
+    <link href="css/preloader.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Lite -->
@@ -15,6 +17,8 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/bar.css">
     <!-- Custom CSS -->
     <link href="css/videotest.css" rel="stylesheet">
     <link href="css/graph-01.css" rel="stylesheet">
@@ -38,137 +42,147 @@
 </head>
 
 <body>
+    <!-- <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div> -->
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-jog">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#home-page">慢跑台北</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#title-info">選單區</a></li>
-                    <li><a href="#story-section">慢跑story</a></li>
-                    <li><a href="#air-section">空氣品質</a></li>
-                    <li><a href="#mapService-section">慢跑hot點</a></li>
-                    <li><a href="#dataInfo-section">綜合分析</a></li>
-                    <li><a href="#group-section">小組介紹</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li class="page-scroll">
+                        <a href="#title-info">選單區</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#story-section">慢跑story</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#air-section">空氣品質</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#mapService-section">慢跑hot點</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#shiny-section">天氣預測</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#conclusion-section">結論分析</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#group-section">小組介紹</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#footer-section">相關連結</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
     <div class="section home-page" id="home-page">
         <div class="switch-display-01">
             <label id="label-switch" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-          <input type="checkbox" id="switch-1" class="mdl-switch__input" checked="">
-          <span class="mdl-switch__label"></span>
-        </label>
+                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked="">
+                <span class="mdl-switch__label"></span>
+            </label>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="img/jog-title-night.svg" class="center-block img-responsive  slideDown " id="img-title">
+                    <img src="img/jog-title-night.svg" data-aos="fade-down" class="center-block img-responsive " id="img-title">
                 </div>
             </div>
         </div>
+        <!-- <img src="img/sun-02.png" class="img-responsive img-sun" id="img-sun"> -->
         <img src="img/jog-grass-night.png" class="img-responsive" id="img-grass">
-        <img src="img/jog-light-01.svg" class="img-responsive slideUp " id="img-light-1">
+        <img src="img/jog-light-01.svg" class="img-responsive  " id="img-light-1">
         <img src="img/jog-light-02.svg" class="img-responsive img-light" id="img-light-2">
         <img src="img/jog-light-03.svg" class="img-responsive img-light" id="img-light-3">
         <img src="img/jog-light-01.svg" class="img-responsive img-light" id="img-light-4">
     </div>
-    <div class="section title-info" id="title-info">
+    <div class="hidden-sm hidden-xs section title-info" id="title-info">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="row about-item-container">
+                    <div data-aos="fade-up" class="row about-item-container">
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-1">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
-                  </span>
-                                <h4>
-                    <strong>慢跑story</strong>
-                  </h4>
-                                <p>為何慢跑?</p>
-                                <a class="btn btn-primary" href="#story-section">更多資訊</a>
+                                <a class="btn btn-default" href="#story-section">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-sun-o fa-stack-1x" id="about-sun-item"></i>
+                                    </span>
+                                    <h4><strong>慢跑story</strong></h4>
+                                    <p>為何慢跑?</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-3">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
-                  </span>
-                                <h4>
-                    <strong>空氣品質</strong>
-                  </h4>
-                                <p>空氣品質影響慢跑品質。</p>
-                                <a class="btn btn-primary" href="#air-section">更多資訊</a>
+                                <a class="btn btn-default" href="#air-section">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-fire  fa-stack-1x" id="about-air-item"></i>
+                                    </span>
+                                    <h4><strong>空氣品質</strong></h4>
+                                    <p>空氣品質影響慢跑品質。</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-2">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
-                  </span>
-                                <h4>
-                    <strong>慢跑HOT點</strong>
-                  </h4>
-                                <p>跑友推薦/地圖服務</p>
-                                <a class="btn btn-primary" href="#mapService-section">更多資訊</a>
+                                <a class="btn btn-default " href="#mapService-section">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-map-marker  fa-stack-1x" id="about-mark-item"></i>
+                                    </span>
+                                    <h4><strong>慢跑HOT點</strong></h4>
+                                    <p>跑友推薦/地圖服務</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-4">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
-                  </span>
-                                <h4>
-                    <b>資料呈現</b>
-                  </h4>
-                                <p>shiny</p>
-                                <a class="btn btn-primary" href="#dataInfo-section">更多資訊</a>
+                                <a class="btn btn-default" href="#shiny-section">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-bar-chart fa-stack-1x" id="about-chart-item"></i>
+                                    </span>
+                                    <h4><strong>資料呈現</strong></h4>
+                                    <p>shiny</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
                             <div class="about-item about-item-5">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-thumbs-up fa-stack-1x" id="about-shiny-item"></i>
-                  </span>
-                                <h4>
-                    <strong>綜合<span style="font-weight:500;">分</span>析</strong>
-                  </h4>
-                                <p>重點歸納與推薦</p>
-                                <a class="btn btn-primary" href="#conclusion-section">更多資訊</a>
+                                <a class="btn btn-default " href="#conclusion-section">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-thumbs-up fa-stack-1x" id="about-shiny-item"></i>
+                                    </span>
+                                    <h4><strong>綜合<span style="font-weight:500;">分</span>析</strong></h4>
+                                    <p>重點歸納與推薦</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="about-item about-item-6">
-                                <span class="fa-stack fa-5x">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-users fa-stack-1x" id="about-conclusion-item"></i>
-                  </span>
-                                <h4>
-                    <strong>小組介紹</strong>
-                  </h4>
-                                <p>組員與爬蟲影片</p>
-                                <a class="btn btn-primary" href="#group-section">更多資訊</a>
-                            </div>
+                            <a class="btn btn-default " href="#group-section">
+                                <div class="about-item about-item-6">
+                                    <span class="fa-stack fa-5x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-users fa-stack-1x" id="about-conclusion-item"></i>
+                                    </span>
+                                    <h4><strong>小組介紹</strong></h4>
+                                    <p>組員與爬蟲影片</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -179,18 +193,66 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center">
-                    <img src="img\img-story-title.png" class="center-block img-responsive" id="img-story-title">
+                    <img src="img\img-story-title-final.png" data-aos="fade-up" class="center-block img-responsive title-image" id="img-story-title">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <h2>慢跑的介紹</h2>
-                    <h2>慢跑該注意?</h2>
-                    <h2>慢跑該到哪呢?</h2>
+                <div class="col-md-12 hidden-md hidden-lg hidden-xl">
                     <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
-                        <div class="col-md-2"></div>
+                        <div class="col-md-6">
+                            <img src="img\bg-3.jpg" class="img-responsive img-rounded">
+                        </div>
+                        <div class="col-md-6 " data-aos="zoom-out">
+                            <h3 class="">慢跑-都市男女的健康浪漫</h3>
+                            <p class="text-center">慢跑亦稱為緩步、緩跑或緩步跑，是一種有氧運動
+                                <br> 目的在以較慢或中等的節奏來跑完一段相對較長的距離
+                                <br>以達到熱身或鍛鍊的目的
+                                <br>
+                                <br> 大多數高水平的運動員，都以慢跑來做熱身
+                                <br> 在歐美國家，尤其是在美國，澳洲和德國
+                                <br>慢跑是一項極為普及的運動~ </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img\bg.jpg" class="img-responsive img-rounded" >
+                        </div>
+                        <div class="col-md-6" data-aos="zoom-out">
+                            <h3 class="">慢跑該注意?</h3>
+                            <p class="text-center">1.慢跑是為了休閒,更是為了健康。
+                                <br>2.所以要在正確地點和時間跑。
+                                <br>3.像是空氣品質,或是適合跑步的地方在哪呢?
+                                <br>4.我們幫助您統整。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 hidden-sm hidden-xs">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img\bg-3.jpg" data-aos="flip-left" class="img-responsive img-rounded">
+                        </div>
+                        <div class="col-md-6" data-aos="slide-up" id="story-01">
+                            <h3 class="text-left">慢跑-都市男女的健康浪漫</h3>
+                            <p class="text-left">慢跑亦稱為緩步、緩跑或緩步跑，是一種有氧運動
+                                <br>目的在以較慢或中等的節奏來跑完一段相對較長的距離
+                                <br>以達到熱身或鍛鍊的目的
+                                <br>
+                                <br>大多數高水平的運動員，都以慢跑來做熱身
+                                <br>在歐美國家，尤其是在美國，澳洲和德國
+                                <br>慢跑是一項極為普及的運動~ </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" data-aos="slide-up">
+                            <h3 class="text-right">慢跑該注意?</h3>
+                            <p class="text-right">1.慢跑是為了休閒,更是為了健康。
+                                <br>2.所以要在正確地點和時間跑。
+                                <br>3.像是空氣品質,或是適合跑步的地方在哪呢?
+                                <br>4.我們幫助您統整。</p>
+                        </div>
+                        <div class="col-md-6" data-aos="flip-right">
+                            <img src="img\bg.jpg" class="img-responsive img-rounded">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,16 +261,19 @@
     <div class="section air-section text-center" id="air-section">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <img src="img\img-air-title-01.png" class="center-block img-responsive" id="img-air-title">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <img src="img\img-air-title-final.png"  class="center-block img-responsive title-image" id="img-air-title">
+                    <p>空氣當中的汙染物等，對敏感...健康..造成影響，那到底一整天當中，適合跑步的時間到底有多少呢?</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h2>空氣品質介紹1(下方一個圖)</h2>
+                    <h4>空氣品質介紹1(下方一個圖)</h4>
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-8 text-center air-info-1">
+                            <div id="graph-01"></div>
+                        </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row">
@@ -222,7 +287,9 @@
                     <h2>空氣品質介紹2(下方一個圖)</h2>
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
+                        <div class="col-md-8 text-center air-info-1">
+                            <div id="graph-02"></div>
+                        </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row">
@@ -233,11 +300,11 @@
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                    <div class="row text-center">
+                    <!-- <div class="row text-center">
                         <div class="col-md-12 text-center">
                             <img src="img\img-air-title-02b.png" class="center-block img-responsive" id="img-air-title-2">
                         </div>
-                    </div>
+                    </div> -->
                     <h2>空氣品質介紹3(跑對地點)</h2>
                     <div class="row">
                         <div class="col-md-2"></div>
@@ -256,11 +323,11 @@
             </div>
         </div>
     </div>
-    <div class="section pop-section">
+    <div class="section pop-section" id="pop-section">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center">
-                    <img src="img\img-pop-title-02.png" class="center-block img-responsive" id="img-pop-title">
+                    <img src="img\img-pop-title.png" data-aos="fade-up" class="center-block img-responsive " id="img-pop-title">
                 </div>
             </div>
         </div>
@@ -268,88 +335,102 @@
     <div class="section mapService-section" id="mapService-section">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <img src="img\img-mapService-title-01.png" class="center-block img-responsive" id="img-mapService-title">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <img src="img\img-mapService-title-final.png"  class="center-block img-responsive title-image" id="img-mapService-title">
+                    <p>台北跑友們最熱愛的跑步地點，究竟有什麼迷人之處?</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8 text-center map-info-01"></div>
-                            <div class="col-md-4 text-center map-control-01"></div>
+                            <div class="col-md-8 text-center map-info-01">
+                                <div id="map-recommend" data-aos="zoom-in"></div>
+                            </div>
+                            <div class="col-md-4 text-center map-control-01">
+                                <div id="street-view" data-aos="zoom-in"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <img src="img\img-mapService-title-02.png" class="center-block img-responsive" id="img-mapService-title-2">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <img src="img\img-mapService-title-02-final.png" class="center-block img-responsive title-image" id="img-mapService-title-02">
+                    <p>究竟在北市，距離你我最近又適合活動的跑步地點是哪裡呢?</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 text-center map-control-02">
-                                 <p>地點輸入</p>
-                        <input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box" />
+                            <div class="col-md-4 text-center map-control-02" data-aos="zoom-in">
+                                <p>地點輸入</p>
+                                <input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box">
                                 <input type="button" value="run" onclick="ShowValue()">
                                 <div id="test"></div>
-                        <script>
-                        function ShowValue(){
-                            var v=document.getElementById("search_location").value;
-                            if(v=="大安"){v="大安森林公園";}
-                            var givealert=["良好!非常適合戶外活動，出門跑跑步吧:D","普通!可以正常戶外活動，但極敏感族群可能會產生呼吸急促和咳嗽喔:)","對敏感族群不健康!今天空氣不是很好，一般跑友應該考慮減少戶外活動，且避免長時間的劇烈運動1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議減少體力消耗活動及戶外活動，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:|","對所有族群不健康!今天空氣不太好，應該特別減少體力消耗，尤其是在室外喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(","非常不健康!今天空氣很差，應該盡可能減少戶外活動!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(","危險!今天空氣超級糟，要盡可能避免所有戶外活動喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(((("];
-                            alert(v);
-                            $.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+document.getElementById("search_location").value, function(json){
-                            console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q="+v);
-                        var e = json.feed.entry,
-                        l = e.length,
-                        searchresult = "",
-                        entry, i, area, location, station, comment, temperature, rain, AQI, PM2, AQI_affect, PM2_5_affect
-                        for (i = 0; i < l; i++) {
-                            entry = e[i];
-                            area = entry.gsx$area.$t;
-                            location = entry.gsx$location.$t;
-                            station = entry.gsx$station.$t;
-                            comment = entry.gsx$comment.$t;
-                            temperature = entry.gsx$temperature.$t;
-                            rain = entry.gsx$rain.$t;
-                            aqi = entry.gsx$aqi.$t;
-                            pm25 = entry.gsx$pm25.$t;
-                            aqiaffect = entry.gsx$aqiaffect.$t;
-
-                            // html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
-                            searchresult += "<br/>"+"目前溫度: "+temperature+"<br/>"+"降雨機率: "+rain+"%"+"<br/>"+"AQI空氣汙染指標: "+aqi+ "<br/>"+"PM2.5: "+pm25+"<br/>"+givealert[aqiaffect-1]+"<br/><br/>跑友這麼說...<br/>"+comment+"let's run";
-                        }
-                        document.getElementById("test").innerHTML = searchresult;
-                        });
-                        }   
-                        </script>
-                        <!-- <p>時間</p>
+                                <script>
+                                    function ShowValue() {
+                                        var v = document.getElementById("search_location").value;
+                                        if (v == "大安") {
+                                            v = "大安森林公園";
+                                        }
+                                        var givealert = ["良好!非常適合戶外活動，出門跑跑步吧:D", "普通!可以正常戶外活動，但極敏感族群可能會產生呼吸急促和咳嗽喔:)", "對敏感族群不健康!今天空氣不是很好，一般跑友應該考慮減少戶外活動，且避免長時間的劇烈運動1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議減少體力消耗活動及戶外活動，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:|",
+                                            "對所有族群不健康!今天空氣不太好，應該特別減少體力消耗，尤其是在室外喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(",
+                                            "非常不健康!今天空氣很差，應該盡可能減少戶外活動!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(",
+                                            "危險!今天空氣超級糟，要盡可能避免所有戶外活動喔!1.有心臟、呼吸道及心血管疾病患者、孩童及老年人，建議留在室內並減少體力消耗，必要外出應配戴口罩。2.具有氣喘的人可能需增加使用吸入劑的頻率。:(((("
+                                        ];
+                                        alert(v);
+                                        $.getJSON("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" + document.getElementById("search_location").value, function(
+                                            json) {
+                                            console.log("https://spreadsheets.google.com/feeds/list/1I2UEVDgoqUdLBVNCQUMcpq_k1oamSyzkkK7auiz1w2U/1/public/values?alt=json-in-script&callback=?&q=" + v);
+                                            var e = json.feed.entry,
+                                                l = e.length,
+                                                searchresult = "",
+                                                entry, i, area, location, station, comment, temperature, rain, AQI, PM2, AQI_affect, PM2_5_affect
+                                            for (i = 0; i < l; i++) {
+                                                entry = e[i];
+                                                area = entry.gsx$area.$t;
+                                                location = entry.gsx$location.$t;
+                                                station = entry.gsx$station.$t;
+                                                comment = entry.gsx$comment.$t;
+                                                temperature = entry.gsx$temperature.$t;
+                                                rain = entry.gsx$rain.$t;
+                                                aqi = entry.gsx$aqi.$t;
+                                                pm25 = entry.gsx$pm25.$t;
+                                                aqiaffect = entry.gsx$aqiaffect.$t;
+                                                // html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
+                                                searchresult += "<br/>" + "目前溫度: " + temperature + "<br/>" + "降雨機率: " + rain + "%" + "<br/>" + "AQI空氣汙染指標: " + aqi + "<br/>" + "PM2.5: " + pm25 + "<br/>" + givealert[aqiaffect - 1] +
+                                                    "<br/><br/>跑友這麼說...<br/>" + comment + "let's run";
+                                            }
+                                            document.getElementById("test").innerHTML = searchresult;
+                                        });
+                                    }
+                                </script>
+                                <!-- <p>時間</p>
                         <input id="search_time" type="text" name="search_time" /> -->
                             </div>
+                            <div class="col-md-8 text-center map-info-02">
+                                <div id="map-3" data-aos="zoom-in"></div>
                             </div>
-                            <div class="col-md-8 text-center map-info-02"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section dataInfo-section" id="dataInfo-section">
-        <img src="img\jog-air-bottom.png" class="img-responsive " id="img-top-01">
+    <div class="section shiny-section" id="shiny-section">
+        <!-- <img src="img\jog-air-bottom.png" class="img-responsive " id="img-top-01"> -->
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-12 text-center">
-                    <img src="img\img-datainfo-title-02.png" class="center-block img-responsive" id="img-datainfo-title">
+                <div class="col-md-12 text-center" data-aos="fade-up">
+                    <img src="img\img-shiny-title-final.png" class="center-block img-responsive title-image" id="img-shiny-title">
+                    <p style="color:white">來看看，最近的...天氣預測!?</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center">shiny</h2>
-                    <iframe src="https://amandahaha.shinyapps.io/air_prediction/" style="border: none; width: 700px; height: 500px"></iframe>
+                    <iframe src="https://amandahaha.shinyapps.io/air_prediction/" id="shiny" data-aos="zoom-in"></iframe>
                 </div>
             </div>
         </div>
@@ -358,12 +439,53 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 text-center">
-                    <img src="img\img-conclusion-title-01.png" class="center-block img-responsive" id="img-conclusion-title-01">
+                    <img src="img\img-conclusion-title-final.png" class="center-block img-responsive title-image" id="img-conclusion-title">
+                    <p>最後整理!究竟適合跑步的時候,地點是...?!!!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="text-center">1.為何要挑對時間(說明嚴重性)並提供何時適合跑步。</h2>
+                    <h3 class="text-center">PM2.5每增加10</h3>
+                                            <ul id="skills">	
+                            <li>
+                                <span>肺癌</span>
+                                <span id="j">↑12%</span>
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#19f" }'>
+                                        <span class="pct">60%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <span>缺血心臟病</span>
+                                <span id="j">↑16%</span>
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#27ae60", "delay": 600 }'>
+                                        <span class="pct">80%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <span>心肺疾病</span>
+                                 <span id="j">↑10%</span>
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#9b59b6", "delay": 1200 }'>
+                                        <span class="pct">50%</span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <span>死亡率</span>
+                                 <span id="j">↑5%</span>
+                                <div class="bar_container">
+                                    <span class="bar" data-bar='{ "color": "#ae8a33", "delay": 1800 }'>
+                                        <span class="pct">25%</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <h4 class="text-center">資料來源:立法院公報</h4>
                     <h2 class="text-center">2.台北的哪裡，跑步要特別注意空氣品質問題。</h2>
                     <h2 class="text-center">3.台北的資源分析。</h2>
                 </div>
@@ -379,64 +501,166 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-
+                    <div class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img\member_amanda_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">Amanda</h3>
+                                    <p class="text-left">組長~ 負責~</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="img\member_詩涵_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">詩涵</h3>
+                                    <p class="text-left">負責~</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img\member_sunny_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">Sunny</h3>
+                                    <p class="text-left">負責~</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="img\member_ryan_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">Ryan</h3>
+                                    <p class="text-left">負責~</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img\member_crea_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">Crea</h3>
+                                    <p class="text-left">負責~</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="img\member_jiyu_01.jpg" class="img-circle img-responsive">
+                                </div>
+                                <div class="col-md-4 text-center group-member">
+                                    <h3 class="text-left">Jiyu</h3>
+                                    <p class="text-left">負責~</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 class="text-center">教學影片</h1>
+                                    <p class="text-center">影片題目：
+                                        <br>影片內容是....
+                                        <br>運用技術...</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/i__1Z5a9Sak" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    <footer class="section footer-section" id="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1 class="text-center footer-word" id="footer-title-01">台北市慢跑熱點分析</h1>
+                    <p class="text-center footer-word" id="footer-word-01">運用資料,跑出健康。運用地圖，跑對地方。</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-md-12 hidden-xs text-center footer-icon-class" id="footer-icon-normal">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 hidden-lg hidden-md hidden-sm text-center" id="footer-icon-xs">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img src="img\group-mark-test-02.png" class="img-responsive" id="footer-groupimage">
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- 首頁影片video js -->
-    <script src="js/videotest.js"></script>
+    <!-- <script src="js/videotest.js"></script> -->
     <!-- 地圖geojson js -->
     <script type="text/javascript" src="js/tpeArea.geojson"></script>
     <script type="text/javascript" src="js/tpeMrt.geojson"></script>
     <script type="text/javascript" src="js/tpeVillage.geojson"></script>
     <script type="text/javascript" src="js/tperiverpark.geojson"></script>
     <!-- 地圖map區 js -->
-    <script type="text/javascript" src="js/map-01.js"></script>
-    <script src="js/map-03.js" type="text/javascript"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&amp;libraries=places&amp;callback=initAutocomplete" async="" defer=""></script>
+    <!-- <script type="text/javascript" src="js/map-01.js"></script> -->
+    <script type="text/javascript" src="js/map-03.js"></script>
     <!-- 地圖search區 js -->
-    <script type="text/javascript" src="js/search.js"></script>
-    <script src="js/google-map-location.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/google-map-location.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- 圖表graph區 js -->
     <script type="text/javascript" src="js/graph-01.js"></script>
+    <script type="text/javascript" src="js/graph-02.js"></script>
+    <script type="text/javascript " src="js/bar2.js "></script>
     <!-- 動畫js -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/img-light-animation.js"></script>
+    <script src="js/img-light-animation.js" type="text/javascript"></script>
     <!-- snow-js(flurry.js) -->
     <script type="text/javascript" src="js/jquery.flurry.js"></script>
     <!-- scroll speed -->
     <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/aos.js"></script>
     <!-- 內建 JavaScript -->
     <script>
+        AOS.init({
+          duration: 1200,
+        });
+
+        $(window).on('load', function() { // makes sure the whole site is loaded
+            $('#loader').fadeOut(); // will first fade out the loading animation
+            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({
+                'overflow': 'visible'
+            });
+        })
         $(document).ready(function() {
                 $("html").niceScroll();
             }
-
         );
         // navbar
-
-
-
-
         (function($) {
             $(document).ready(function() {
-
                 // hide .navbar first
                 $(".navbar").hide();
-
                 // fade in .navbar
                 $(function() {
                     $(window).scroll(function() {
-
                         // set distance user needs to scroll before we start fadeIn
                         if ($(this).scrollTop() > 250) {
                             $('.navbar').fadeIn();
@@ -445,7 +669,6 @@
                         }
                     });
                 });
-
             });
         }(jQuery));
         // snow effect
@@ -453,7 +676,6 @@
             $('.home-page').flurry();
         });
         //switch-button change theme
-
         $('#switch-1').change(function() {
             if (this.checked) {
                 $(".home-page").css("background-color", "#103E55");
@@ -467,7 +689,6 @@
                 return;
             }
         });
-
         // Closes the sidebar menu
         $("#menu-close").click(function(e) {
             e.preventDefault();
@@ -483,6 +704,7 @@
             e.preventDefault();
             $("#sidebar-wrapper").toggleClass("active");
         });
+
         // Scrolls to the selected menu item on the page
         $(function() {
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
@@ -498,8 +720,6 @@
                 }
             });
         });
-
-
         //#to-top button appears after scrolling
         var fixed = false;
         $(document).scroll(function() {
@@ -525,7 +745,6 @@
                 }
             }
         });
-
         var aboutItemAnimatetime = 150;
         //about-info-dislay js
         $(".about-item-1").hover(function() {
@@ -534,8 +753,8 @@
                 $(".title-info").animate({
                     backgroundColor: "#FFB61E"
                 }, aboutItemAnimatetime);
-                $("#about-sun-item").css("color", "#FFB61E");
-
+                $("#about-sun-item").css("color", "#FFB61E"
+              );
             })
             // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
         $(".about-item-2").hover(function() {
@@ -546,7 +765,6 @@
             }, aboutItemAnimatetime)
             $("#about-mark-item").css("color", "#C3272B");
         })
-
         $(".about-item-3").hover(function() {
             $(".about-info-item").hide();
             $(".about-info-item-3").show();
@@ -575,13 +793,55 @@
             $(".about-info-item").hide();
             $(".about-info-item-6").show();
             $(".title-info").animate({
-                backgroundColor: "#5c067e"
+                backgroundColor: "#f791f3"
             }, aboutItemAnimatetime)
-            $("#about-conclusion-item").css("color", "#5c067e");
+            $("#about-conclusion-item").css("color", "#f791f3");
         })
     </script>
-
-
+    <script>
+        //google地圖 #map-recommened
+        var map;
+        function initMap() {
+            var myLatLng = {
+                lat: 25.016754,
+                lng: 121.533701
+            };
+            var map = new google.maps.Map(document.getElementById('map-recommend'), {
+                center: {
+                    lat: 25.016754,
+                    lng: 121.533701
+                },
+                scrollwheel: false,
+                zoom: 8
+            });
+            // Create a marker and set its position.
+            var marker = new google.maps.Marker({
+                        map: map,
+                        position: myLatLng,
+                        title: 'Hello World!'
+                    })
+                  }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6wyswnvKuR00T4u3uqN2BDNB--6q5lU&callback=initMap" async defer></script>
+    <script>
+        //街景api #street-view
+        var panorama;
+        function initialize() {
+            panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('street-view'), {
+                    position: {
+                        lat: 25.016754,
+                        lng: 121.533701
+                    },
+                    pov: {
+                        heading: 65,
+                        pitch: 0
+                    },
+                    zoom: 1
+                });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&signed_in=true&callback=initialize"></script>
 </body>
 
 </html>

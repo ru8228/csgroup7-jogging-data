@@ -161,7 +161,9 @@ hr.small {
 .toggle {
     margin: 5px 5px 0 0;
 }
-
+/* navbar-jog*/
+#navbar-jog{
+}
 
 /* Header 首頁*/
 
@@ -197,7 +199,6 @@ hr.small {
 }
 
 
-}
 .about {
     background-image: url(../img/bg-3.jpg);
 }
@@ -222,11 +223,11 @@ hr.small {
 }
 .about-item-container .about-item:hover {
     opacity: 1;
-    -webkit-transform: scale(1.2);
+    /*-webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.2);*/
 }
 #about-sun-item, #about-mark-item, #about-air-item, #about-chart-item, #about-shiny-item, #about-conclusion-item {
     color: #6C7A89;
@@ -276,6 +277,8 @@ hr.small {
 }
 
 /* Services 地圖分析*/
+
+
 .services {
     height: auto;
 }
@@ -297,6 +300,7 @@ hr.small {
 }
 #map,#map-3 {
     height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .map-info-container {
     padding: 0px;
@@ -382,46 +386,3 @@ hr.small {
 }
 #target {
     width: 345px;
-    /* ########################################### */
-    /* dataGraph 圖表呈現*/
-
-    .dataGraph {
-        height: auto;
-    }
-
-    .dataGraph>.section-topic-color2 {
-        background-color: #303F9F;
-    }
-    /* Callout */
-
-    .callout {
-        display: table;
-        width: 100%;
-        height: 200px;
-        color: #fff;
-        background: url(../img/grass.jpg) no-repeat center center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    /* Call to Action */
-
-    .call-to-action {
-        padding: 50px 0;
-    }
-
-    .call-to-action .btn {
-        margin: 10px;
-    }
-    /*group-intro組員介紹 */
-
-    .group-intro {
-        height: 900px;
-        /*background-image:url(../img/bg.jpg);*/
-    }
-
-    .group-intro>.section-topic-color2 {
-        background-color: #303F9F;
-    }
-    /* Footer */
