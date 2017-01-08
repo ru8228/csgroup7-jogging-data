@@ -7192,23 +7192,16 @@ html, body {
 }
 
 .air-info-1 {
-    height: 500px;
-    /*border: 2px solid black;
-    border-radius: 20px;*/
-    padding: 30px;
-    width:100%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 3px;
+
 }
 .canvasjs-chart-credit {
    display: none;
 }
 
-#pieChart-01{
-    position: relative;
-    margin: auto;
-    height:400px;
-    width:400px;
-
-}
 
 .pieTip {
     position: absolute;
@@ -7437,4 +7430,10 @@ html, body {
 .img-circle {
     margin: 10px;
     padding: 5px;
+}
+
+hr.style13 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
