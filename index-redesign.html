@@ -32,8 +32,10 @@
     <!-- leaflet css & js -->
     <link href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" rel="stylesheet">
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-    <!-- d3 js -->
+    <!--  cs/d3 js -->
+    <link href="css/c3.css" rel="stylesheet" type="text/css">
     <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/c3.min.js"></script>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- info -->
@@ -269,30 +271,57 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3 data-aos="fade-up"><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i>適合跑步的時間有多少!?</h3>
-
+                    <h3 data-aos="fade-up"><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i>議題一：適合跑步的時間有多少!?</h3>
+                    <div class="row" data-aos="zoom-out">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center air-info-0">
+                            <h4>空氣品質說明</h4>
+                            <div class="legend-info">
+                                <div class='my-legend'>
+                                    <div class='legend-title'>PM 2.5 濃度指標</div>
+                                    <div class='legend-scale'>
+                                        <ul class='legend-labels'>
+                                            <li><span style='background:#9CFF9C;'></span>濃度0-11</li>
+                                            <li><span style='background:#31FF00;'></span>12-23</li>
+                                            <li><span style='background:#31CF00;'></span>24-35</li>
+                                            <li><span style='background:#FFFF00;'></span>36-41</li>
+                                            <li><span style='background:#FFCF00;'></span>42-47</li>
+                                            <li><span style='background:#FF9A00;'></span>48-53</li>
+                                            <li><span style='background:#FF6464;'></span>54-58</li>
+                                            <li><span style='background:#FF0000;'></span>59-64</li>
+                                            <li><span style='background:#990000;'></span>65-70</li>
+                                            <li><span style='background:#CE30FF;'></span> >71</li>
+                                        </ul>
+                                    </div>
+                                    <div class='legend-source'>空氣品質資料來源： <a target="_blank" href="http://taqm.epa.gov.tw/taqm/tw/AqiSiteMap.aspx">行政院空氣品質監測網</a></div>
+                                    <div class='legend-source'>PM2.5空氣指標及顏色分類：<a target="_blank" href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a>。</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-4 text-center air-info-1" data-aos="fade-right">
-                            <h3>空氣差的一天</h3>
-                            <p>
+                        <div class="col-md-4 text-center air-info-0" data-aos="fade-right">
+                            <h4>空氣「差」的一天</h4>
+                            <p style="font-style: italic">
                                 『咳咳咳...』在12/21這天，台北的空氣品質好糟:(
                                 <br> 這一天當中...有多少的時間適合跑步呢?
                             </p>
                             <div id="pieChart-01"></div>
                             <p>
-                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，只有45%的時間是可以跑步的
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，這天當中有45%的時間適合所有人跑步。
                             </p>
                             <div id="pieChart-02"></div>
                             <p>
-                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，只有45%的時間是可以跑步的
+                                <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，這天當中有60%的時間適合所有人跑步。
                             </p>
                         </div>
                         <hr class="style13 hidden-lg hidden-md hidden-sm">
-                        <div class="col-md-4 text-center air-info-1" data-aos="fade-left">
-                            <h3>空氣好的一天</h3>
-                            <p>
-                                哇哈哈哈~~氣象預報中~今天空氣品質不錯呢
+                        <div class="col-md-4 text-center air-info-0" data-aos="fade-left">
+                            <h4>空氣「好」的一天</h4>
+                            <p style="font-style: italic">
+                                哇哈哈哈~~氣象預報中~12/04這天空氣品質不錯呢
                                 <br> 那有多少的時間適合跑步呢~~~?
                             </p>
                             <div id="pieChart-03"></div>
@@ -306,60 +335,95 @@
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center slide-bar-01">
-                            <p>PM2.5空氣指標及顏色分類，參考環境保護署之定義。</p>
-                            <p>請參考<a href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a></p>
 
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <!-- <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center slide-bar-01">
-                            <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div> -->
+                </div>
 
-                    <h3><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i> 空氣品質介紹2(12月當中 一天裡面有多少是可以跑步的)</h3>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1">
-                            <!-- <div id="pieChart-01" class="chart"></div> -->
 
+                    <div class="col-md-12">
+                        <h3 data-aos="fade-up"><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i>議題二：那是那些時段呢?</h3>
+                        <p data-aos="fade-up">
+                          現在我們知道了，有些日子不是"全時段"都適合跑步。但是空氣差,我還是想跑...什麼時段跑會最好呢?
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row" data-aos="zoom-out">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8 text-center air-info-1">
+                                        <h4>空氣品質的"周間"vs"周末"</h4>
+                                        <p>
+                                          空氣品質也是會"放假"的。
+                                        </p>
+                                        <div id="lineChart-00">
+                                          <iframe src="https://plotdb.io/v/chart/12503" width="100%" height="400px" frameborder="0"></iframe>
+                                        </div>
+                                        <p>
+                                            <i class="fa fa-caret-up fa-x" aria-hidden="true"></i>201612月份，板橋地區
+                                        </p>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4 text-center air-info-1" data-aos="fade-right">
+                                <h3>『周間』的台北</h3>
+                                <p>
+
+                                </p>
+                                <div id="lineChart-01">
+                                  <iframe src="https://plotdb.io/v/chart/12502" width="100%" height="400px" frameborder="0"></iframe>
+                                </div>
+                                <p>
+                                    <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，周間時期測站折線圖。
+                                </p>
+                                <div id="lineChart-02">
+                                  <iframe src="https://plotdb.io/v/chart/12501" width="100%" height="400px" frameborder="0"></iframe>
+                                </div>
+                                <p>
+                                    <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，周間時期測站折線圖。
+                                </p>
+                            </div>
+                            <hr class="style13 hidden-lg hidden-md hidden-sm">
+                            <div class="col-md-4 text-center air-info-1" data-aos="fade-left">
+                                <h3>『周末』的台北</h3>
+                                <p>
+
+                                </p>
+                                <div id="lineChart-03">
+                                  <iframe src="https://plotdb.io/v/chart/12501" width="100%" height="400px" frameborder="0"></iframe>
+
+                                </div>
+                                <p>
+                                    <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 古亭地區，全天都非常適合跑步呢!
+                                </p>
+                                <div id="lineChart-04">
+                                  <iframe src="https://plotdb.io/v/chart/12501" width="100%" height="400px" frameborder="0"></iframe>
+
+                                </div>
+                                <p>
+                                    <i class="fa fa-caret-up fa-x" aria-hidden="true"></i> 板橋地區，全天都非常適合跑步呢!
+                                </p>
+                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <div class="col-md-2"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center slide-bar-01">
-                        </div>
-                        <div class="col-md-2"></div>
+                <h2>空氣品質介紹3(跑對地點)</h2>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center air-info-1"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center slide-bar-01">
+                        <!-- Slider -->
+                        <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
                     </div>
-                    <!-- <div class="row text-center">
-                        <div class="col-md-12 text-center">
-                            <img src="img\img-air-title-02b.png" class="center-block img-responsive" id="img-air-title-2">
-                        </div>
-                    </div> -->
-                    <h2>空氣品質介紹3(跑對地點)</h2>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center air-info-1"></div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8 text-center slide-bar-01">
-                            <!-- Slider -->
-                            <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <div class="section pop-section" id="pop-section">
         <div class="container">
