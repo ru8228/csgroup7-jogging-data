@@ -203,7 +203,7 @@
                 <div class="col-md-12 hidden-md hidden-lg hidden-xl">
                     <div class="row">
                         <div class="col-md-6" data-aos="zoom-out">
-                            <img src="img\bg-3.jpg" class="img-responsive img-rounded">
+                            <img src="img\bg-3.jpg" class="img-responsive img-rounded img-shadow">
                         </div>
                         <div class="col-md-6 " data-aos="zoom-out">
                             <h3 class="">慢跑-都市男女的健康浪漫</h3>
@@ -218,7 +218,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6" data-aos="zoom-out">
-                            <img src="img\bg.jpg" class="img-responsive img-rounded">
+                            <img src="img\bg.jpg" class="img-responsive img-rounded img-shadow">
                         </div>
                         <div class="col-md-6" data-aos="zoom-out">
                             <h3 class="">慢跑該注意?</h3>
@@ -232,7 +232,7 @@
                 <div class="col-md-12 hidden-sm hidden-xs">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img\bg-3.jpg" data-aos="flip-left" class="img-responsive img-rounded">
+                            <img src="img\bg-3.jpg" data-aos="flip-left" class="img-responsive img-rounded img-shadow">
                         </div>
                         <div class="col-md-6" data-aos="slide-up" id="story-01">
                             <h3 class="text-left">慢跑-都市男女的健康浪漫</h3>
@@ -254,7 +254,7 @@
                                 <br>4.我們幫助您統整。</p>
                         </div>
                         <div class="col-md-6" data-aos="flip-right">
-                            <img src="img\bg.jpg" class="img-responsive img-rounded">
+                            <img src="img\bg.jpg" class="img-responsive img-rounded img-shadow">
                         </div>
                     </div>
                 </div>
@@ -415,9 +415,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2"></div>
-                    <div class="col-md-8 text-center slide-bar-01">
-                        <!-- Slider -->
-                        <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="20" tabindex="0">
+                    <div class="col-md-8 text-center ">
+
                     </div>
                     <div class="col-md-2"></div>
                 </div>
@@ -707,7 +706,8 @@
                 </div>
             </div>
         </div>
-        <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        <!-- <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> -->
+        <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><img src="img/totopbear-02.png" height="70px" width="auto"</a>
     </footer>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -853,6 +853,16 @@
                 }
             }
         });
+        var animateTime01 = 800;
+        // #to-top的換位置功能
+        $("#to-top").click(function() {
+          $("#to-top").animate({
+            bottom:"500px"
+          },animateTime01,function() {
+	          $('#to-top').removeAttr('style')
+          })
+        });
+
         var aboutItemAnimatetime = 150;
         //about-info-dislay js
         $(".about-item-1").hover(function() {
