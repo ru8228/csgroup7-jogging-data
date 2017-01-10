@@ -7479,7 +7479,7 @@ html, body {
 }
 
 .group-section {
-    background-color: #103E55;
+    background-color: #6bb8da;
     position: relative;
 }
 
@@ -7530,4 +7530,15 @@ hr.style13 {
 }
 .word12{
     color:rgb(119, 119, 120);
+}
+.barchart-container{
+
+  height:auto;
+}
+
+#chart{
+  position: relative;
+  left:-20px;
+  height:auto;
+  width:auto;
 }
