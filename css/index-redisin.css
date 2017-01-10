@@ -7403,8 +7403,13 @@ html, body {
 
 
 /*conclusion-section */
+.conclu-1{
+    margin-top:30px;
 
-
+}
+#skills{
+  padding-left: 0px;
+}
 /*group section*/
 
 .group-member {
