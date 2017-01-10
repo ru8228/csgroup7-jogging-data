@@ -7538,9 +7538,10 @@ hr.style13 {
 
 #chart{
   position: relative;
-  left:-20px;
+  margin:auto;
+  left:-35px;
   height:auto;
-  width:auto;
+  width:360px;
 }
 
 .app{
@@ -7550,4 +7551,26 @@ hr.style13 {
 
 .group-color{
     color: white;
+}
+
+#pikarun{
+    position: relative;
+    display: block;
+    margin:auto;
+    top: 30%;
+    width: 220px;
+    height: auto;
+}
+#loading22{
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    height: auto;
+}
+#loadingimg{
+    height: 30px;
+    position: relative;
+    display: block;
+    margin:auto;
+    top: 30%;
 }

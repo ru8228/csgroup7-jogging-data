@@ -125,7 +125,12 @@
 
 <body>
     <div id="loader-wrapper">
-        <div id="loader"></div>
+        <!-- <div id="loader"></div> -->
+          <img id="pikarun" src="img/catrunning.gif">
+          <img id="loadingimg" src="img/loading.gif">
+          <!-- <div id="loading22">
+            <h1>loading...</h1>
+          </div> -->
     </div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-jog">
@@ -361,7 +366,7 @@
                             <div class="legend-info">
                                 <div class='my-legend'>
                                     <div class='legend-title'>PM 2.5 濃度指標</div>
-                                    <div class='legend-scale'>
+                                    <!-- <div class='legend-scale'>
                                         <ul class='legend-labels'>
                                             <li><span style='background:#9CFF9C;'></span>濃度0-11</li>
                                             <li><span style='background:#31FF00;'></span>12-23</li>
@@ -374,7 +379,7 @@
                                             <li><span style='background:#990000;'></span>65-70</li>
                                             <li><span style='background:#CE30FF;'></span> >71</li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <div class='legend-source'>空氣品質資料來源： <a target="_blank" href="http://taqm.epa.gov.tw/taqm/tw/AqiSiteMap.aspx">行政院空氣品質監測網</a></div>
                                     <div class='legend-source'>PM2.5空氣指標及顏色分類：<a target="_blank" href="http://www.taichung.gov.tw/public/Attachment/108010/1554275_%E3%80%8C%E5%9B%A0%E6%87%89%E4%B8%8D%E5%90%8C%E7%A9%BA%E6%B0%A3%E5%93%81%E8%B3%AA%E4%B9%8B%E9%81%8B%E5%8B%95%E5%BB%BA%E8%AD%B0%E3%80%8D.pdf">環境保護署-因應不同空氣品質之運動建議</a>。</div>
                                 </div>
@@ -824,8 +829,8 @@
         });
         $(window).on('load', function() { // makes sure the whole site is loaded
             $('#loader').fadeOut(); // will first fade out the loading animation
-            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-            $('body').delay(350).css({
+            $('#loader-wrapper').delay(800).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(800).css({
                 'overflow': 'visible'
             });
         })
