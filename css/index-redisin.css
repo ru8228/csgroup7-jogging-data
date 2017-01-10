@@ -7453,13 +7453,13 @@ html, body {
 }
 
 .pop-section {
-    background-color: #282D33;
+    background-color: #103E55;
     position: relative;
     padding: 10px;
 }
 
 .mapService-section {
-    background-color: #FFF;
+    background-color: #eeeff1;
     position: relative;
 }
 
@@ -7514,4 +7514,15 @@ hr.style13 {
     height: 10px;
     border: 0;
     box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.word10{
+    color:black;
+}
+.word11{
+    font-size: 10px;
+    color:rgb(173, 180, 182);
+}
+.word12{
+    color:rgb(119, 119, 120);
 }
