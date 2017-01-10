@@ -7186,22 +7186,97 @@ html, body {
 
 /*air-info */
 
+.my-legend .legend-title {
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+
+.my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+}
+.legend-scale{
+    text-align: center;
+    width: auto;
+    height: auto;
+    position: relative;
+    left:13%;
+
+}
+
+.my-legend ul.legend-labels li span {
+
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+}
+
+.my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+}
+
+.my-legend a {
+    color: #777;
+}
+
 #graph-01 {
     height: 100%;
     width: auto;
 }
 
-.air-info-1 {
+.air-info-0 {
     height: auto;
-    border: 2px solid black;
+    border: 1px solid rgba(215, 211, 205, 0.7);
     border-radius: 20px;
+    background-color: rgba(215, 211, 205, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
     padding: 3px;
-
+    margin: 5px;
 }
+
+
+.air-info-c1{
+  height: auto;
+  border: 1px solid rgba(215, 211, 205, 0.7);
+  border-radius: 20px;
+  background-color: rgba(246, 189, 247, 0.72);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+  padding-left:40px;
+  padding-right:40px;
+  margin: 5px;
+}
+
+
+.air-info-1 {
+  height: auto;
+  border: 1px solid rgba(1, 173, 190, 0.7);
+  border-radius: 20px;
+  background-color: rgba(0, 117, 224, 0.05);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: 3px;
+  margin: 5px;
+}
+
 .canvasjs-chart-credit {
-   display: none;
+    display: none;
 }
-
 
 .pieTip {
     position: absolute;
@@ -7259,11 +7334,14 @@ html, body {
     bottom: 0;
 }
 
+.pdb-viewer  #plotdb-mark{
+  display: none;
+}
+.img-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* story-section*/
-
-#story-01 {}
-
 
 /* mapService-section */
 
@@ -7325,8 +7403,13 @@ html, body {
 
 
 /*conclusion-section */
+.conclu-1{
+    margin-top:30px;
 
-
+}
+#skills{
+  padding-left: 0px;
+}
 /*group section*/
 
 .group-member {
@@ -7375,13 +7458,13 @@ html, body {
 }
 
 .pop-section {
-    background-color: #282D33;
+    background-color: #103E55;
     position: relative;
     padding: 10px;
 }
 
 .mapService-section {
-    background-color: #FFF;
+    background-color: #eeeff1;
     position: relative;
 }
 
@@ -7396,7 +7479,7 @@ html, body {
 }
 
 .group-section {
-    background-color: #103E55;
+    background-color: #6bb8da;
     position: relative;
 }
 
@@ -7433,7 +7516,29 @@ html, body {
 }
 
 hr.style13 {
-	height: 10px;
-	border: 0;
-	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.word10{
+    color:black;
+}
+.word11{
+    font-size: 10px;
+    color:rgb(173, 180, 182);
+}
+.word12{
+    color:rgb(119, 119, 120);
+}
+.barchart-container{
+
+  height:auto;
+}
+
+#chart{
+  position: relative;
+  left:-20px;
+  height:auto;
+  width:auto;
 }

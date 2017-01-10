@@ -1,18 +1,18 @@
 //画布大小
-var width = 450;
-var height = 450;
+var width = 400;
+var height = 300;
 
 //在 body 里添加一个 SVG 画布
-var svg = d3.select("#graph-01")
+var svg = d3.select("#chart")
 		.append("svg")
 		.attr("width", width)
 		.attr("height", height);
 
 //画布周边的空白
-var padding = {left:30, right:30, top:20, bottom:20};
+var padding = {left:5, right:5, top:5, bottom:5};
 
 //定义一个数组
-var dataset = [10, 20, 30, 40, 33, 24, 12, 5];
+var dataset = [13,14,16,14,12,7,7,5,4,5,3,10,11,6,6,4,5,3,1,6,8,10,12,12];
 
 //x轴的比例尺
 var xScale = d3.scale.ordinal()
