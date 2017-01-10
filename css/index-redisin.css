@@ -7542,3 +7542,12 @@ hr.style13 {
   height:auto;
   width:auto;
 }
+
+.app{
+  position: relative;
+  left:-40px;
+}
+
+.group-color{
+    color: white;
+}
