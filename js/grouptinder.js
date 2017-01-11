@@ -41,7 +41,7 @@ var Person = {
     {
       name: 'Hannah',
       age: "<a target=\"_blank\" href=\"https://www.facebook.com/profile.php?id=100002801051427\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
-      img: "./img/member_hana_01.jpg"
+      img: "./img/member_hannah_01.jpg"
     }
   ],
   add: function(){
