@@ -125,14 +125,10 @@
 </head>
 
 <body>
-    <div id="loader-wrapper">
-        <!-- <div id="loader"></div> -->
+    <!-- <div id="loader-wrapper">
         <img id="pikarun" src="img/catrunning.gif">
         <img id="loadingimg" src="img/loading.gif">
-        <!-- <div id="loading22">
-            <h1>loading...</h1>
-          </div> -->
-    </div>
+    </div> -->
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-jog">
         <div class="container-fluid">
@@ -717,86 +713,73 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                  <div class="col-md-2"></div>
-                  <div class="col-md-8" style="height:400px">
-                    <h2 class="text-center group-color" >組員介紹</h1>
+                  <div class="col-md-4 group-intro-1 group-intro" style="height:500px">
+                    <h3 class="text-center group-color" >組員介紹</h3>
                     <div id="people"></div>
                     <div id="control">
                         <div class="button no">
-                            <a href="#" class="trigger"></a>
-                        </div>
-                        <div class="button info">
                             <a href="#" class="trigger"></a>
                         </div>
                         <div class="button yes">
                             <a href="#" class="trigger"></a>
                         </div>
                     </div>
-                    <!-- <div class="app">
-                        <div class="content">
-                        </div>
-                        <div class="footer">
-                            <div id="swipe_dislike" class="rate"></div>
-                            <div class="info"></div>
-                            <div id="swipe_like" class="rate"></div>
-                        </div>
-                    </div> -->
-                  </div>
-                  <div class="col-md-2"></div>
                 </div>
-                  <div class="row text-center">
-                      <div class="col-md-12">
-                          <h2 class="text-center group-color" >教學影片</h1>
-                      </div>
-                  </div>
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hvSYbtRpgE"></iframe>
-                                    </div>
-                                </div>
-                                <div class="col-md-3"></div>
+                <div class="col-md-4 group-intro-2">
+                    <h3 class="text-center group-color">網站小記</h3>
+                    <p class="text-center group-color">
+                        2016年的
+                    </p>
+                </div>
+                <div class="col-md-4 group-intro-3">
+                    <h3 class="text-center group-color">教學影片</h3>
+                    <div class="row text-center">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 youtube-container">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hvSYbtRpgE"></iframe>
                             </div>
                         </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="section footer-section" id="footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h1 class="text-center footer-word" id="footer-title-01">台北市慢跑熱點分析</h1>
-                        <p class="text-center footer-word" id="footer-word-01">運用資料,跑出健康。運用地圖，跑對地方。</p>
-                    </div>
+    </div>
+    <footer class="section footer-section" id="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1 class="text-center footer-word" id="footer-title-01">台北市慢跑熱點分析</h1>
+                    <p class="text-center footer-word" id="footer-word-01">運用資料,跑出健康。運用地圖，跑對地方。</p>
+                </div>
 
-                    <div class="col-sm-4">
-                        <div class="row">
-                            <div class="col-md-12 hidden-xs text-center footer-icon-class" id="footer-icon-normal">
-                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-center" id="footer-icon-xs">
-                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                            </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-md-12 hidden-xs text-center footer-icon-class" id="footer-icon-normal">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
                         </div>
                     </div>
-                    <div class="col-sm-4 text-center">
-                        <img src="img\group-mark-test-02.png" class="img-responsive" id="footer-groupimage">
+                    <div class="row">
+                        <div class="col-md-12 hidden-lg hidden-md hidden-sm text-center" id="footer-icon-xs">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-4 text-center">
+                    <img src="img\group-mark-test-02.png" class="img-responsive" id="footer-groupimage">
+                </div>
             </div>
-            <!-- <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> -->
-            <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><img src="img/totopbear-02.png" height="70px" width="auto"</a>
-        </footer>
+        </div>
+        <!-- <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> -->
+        <a id="to-top" href="#home-page" class="btn btn-dark btn-lg"><img src="img/totopbear-02.png" height="70px" width="auto" </a>
+    </footer>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -837,7 +820,7 @@
     <!-- 內建 JavaScript -->
     <script>
         AOS.init({
-          duration: 1200,
+            duration: 1200,
         });
         $(window).on('load', function() { // makes sure the whole site is loaded
             $('#loader').fadeOut(); // will first fade out the loading animation
@@ -847,9 +830,8 @@
             });
         })
         $(document).ready(function() {
-                $("html").niceScroll();
-            }
-        );
+            $("html").niceScroll();
+        });
         // navbar
         (function($) {
             $(document).ready(function() {
@@ -928,7 +910,7 @@
                     $('#to-top').show("slow", function() {
                         $('#to-top').css({
                             position: 'fixed',
-                            display: 'block'
+                            display: 'inline-block'
                         });
                     });
                 }
@@ -946,11 +928,11 @@
         var animateTime01 = 800;
         // #to-top的換位置功能
         $("#to-top").click(function() {
-          $("#to-top").animate({
-            bottom:"500px"
-          },animateTime01,function() {
-	          $('#to-top').removeAttr('style')
-          })
+            $("#to-top").animate({
+                bottom: "500px"
+            }, animateTime01, function() {
+                $('#to-top').removeAttr('style')
+            })
         });
 
         var aboutItemAnimatetime = 150;
@@ -961,8 +943,7 @@
                 $(".title-info").animate({
                     backgroundColor: "#FFB61E"
                 }, aboutItemAnimatetime);
-                $("#about-sun-item").css("color", "#FFB61E"
-              );
+                $("#about-sun-item").css("color", "#FFB61E");
             })
             // https://goo.gl/YdJNP9  參考一下css :after and :before rules aren't part of the DOM
         $(".about-item-2").hover(function() {
@@ -1006,112 +987,111 @@
             $("#about-conclusion-item").css("color", "#f791f3");
         })
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6wyswnvKuR00T4u3uqN2BDNB--6q5lU&callback=initMap" async
-          defer></script>
-          <script>
-              //街景api #street-view
-              var panorama;
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6wyswnvKuR00T4u3uqN2BDNB--6q5lU&callback=initMap" async defer></script>
+    <script>
+        //街景api #street-view
+        var panorama;
 
-              function initialize() {
-                  var LatLng1 = {
-                      lat: 24.9877249,
-                      lng: 121.5591697
-                  }; //木柵公園
-                  var LatLng2 = {
-                      lat: 25.0293227,
-                      lng: 121.5359793
-                  }; //大安森林公園
-                  var LatLng3 = {
-                      lat: 25.0346522,
-                      lng: 121.52182649999997
-                  };
-                  var taida = {
-                      lat: 25.0169587,
-                      lng: 121.5338507
-                  }; //ntu
+        function initialize() {
+            var LatLng1 = {
+                lat: 24.9877249,
+                lng: 121.5591697
+            }; //木柵公園
+            var LatLng2 = {
+                lat: 25.0293227,
+                lng: 121.5359793
+            }; //大安森林公園
+            var LatLng3 = {
+                lat: 25.0346522,
+                lng: 121.52182649999997
+            };
+            var taida = {
+                lat: 25.0169587,
+                lng: 121.5338507
+            }; //ntu
 
-                  panorama = new google.maps.StreetViewPanorama(
-                      document.getElementById('street-view'), {
-                          position: LatLng2,
-                          pov: {
-                              heading: 65,
-                              pitch: 0
-                          },
-                          zoom: 1
-                      });
-                  //recommend map
+            panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('street-view'), {
+                    position: LatLng2,
+                    pov: {
+                        heading: 65,
+                        pitch: 0
+                    },
+                    zoom: 1
+                });
+            //recommend map
 
-                  var map = new google.maps.Map(document.getElementById('map-recommend'), {
-                      zoom: 12,
-                      center: LatLng2
-                  });
+            var map = new google.maps.Map(document.getElementById('map-recommend'), {
+                zoom: 12,
+                center: LatLng2
+            });
 
-                  var marker1 = new google.maps.Marker({
-                      position: LatLng1,
-                      map: map,
-                      title: "木柵公園"
-                  });
-                  var marker2 = new google.maps.Marker({
-                      position: LatLng2,
-                      map: map,
-                      title: "大安森林公園"
-                  });
-                  var marker3 = new google.maps.Marker({
-                      position: LatLng3,
-                      map: map,
-                      title: "台灣民主紀念園區"
-                  });
-                  //marker clicker
-                  map.addListener('center_changed', function () {
-                      // 3 seconds after the center of the map has changed, pan back to the
-                      // marker.
-                      window.setTimeout(function () {
-                          map.panTo(marker3.getPosition());
-                      }, 3000);
-                  });
-                  marker1.addListener('click', function () {
-                      map.setZoom(12);
-                      map.setCenter(marker1.getPosition());
-                      panorama = new google.maps.StreetViewPanorama(
-                          document.getElementById('street-view'), {
-                              position: LatLng1,
-                              pov: {
-                                  heading: 65,
-                                  pitch: 0
-                              },
-                              zoom: 1
-                          });
-                  });
-                  marker2.addListener('click', function () {
-                      map.setZoom(12);
-                      map.setCenter(marker2.getPosition());
-                      panorama = new google.maps.StreetViewPanorama(
-                          document.getElementById('street-view'), {
-                              position: LatLng2,
-                              pov: {
-                                  heading: 65,
-                                  pitch: 0
-                              },
-                              zoom: 1
-                          });
-                  });
-                  marker3.addListener('click', function () {
-                      map.setZoom(12);
-                      map.setCenter(marker3.getPosition());
-                      panorama = new google.maps.StreetViewPanorama(
-                          document.getElementById('street-view'), {
-                              position: LatLng3,
-                              pov: {
-                                  heading: 65,
-                                  pitch: 0
-                              },
-                              zoom: 1
-                          });
-                  });
-              }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&signed_in=true&callback=initialize"></script>
+            var marker1 = new google.maps.Marker({
+                position: LatLng1,
+                map: map,
+                title: "木柵公園"
+            });
+            var marker2 = new google.maps.Marker({
+                position: LatLng2,
+                map: map,
+                title: "大安森林公園"
+            });
+            var marker3 = new google.maps.Marker({
+                position: LatLng3,
+                map: map,
+                title: "台灣民主紀念園區"
+            });
+            //marker clicker
+            map.addListener('center_changed', function() {
+                // 3 seconds after the center of the map has changed, pan back to the
+                // marker.
+                window.setTimeout(function() {
+                    map.panTo(marker3.getPosition());
+                }, 3000);
+            });
+            marker1.addListener('click', function() {
+                map.setZoom(12);
+                map.setCenter(marker1.getPosition());
+                panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng1,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+            });
+            marker2.addListener('click', function() {
+                map.setZoom(12);
+                map.setCenter(marker2.getPosition());
+                panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng2,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+            });
+            marker3.addListener('click', function() {
+                map.setZoom(12);
+                map.setCenter(marker3.getPosition());
+                panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street-view'), {
+                        position: LatLng3,
+                        pov: {
+                            heading: 65,
+                            pitch: 0
+                        },
+                        zoom: 1
+                    });
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRmRLd_EOocye07JIZrJwR5GTlFFb2ekQ&signed_in=true&callback=initialize"></script>
 
-  </body>
+</body>
 
 </html>

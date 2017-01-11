@@ -9,54 +9,44 @@ var Person = {
   wrap: $('#people'),
   people: [
     {
-      name: 'Linda',
-      age: 25,
-      img: "http://i.imgur.com/QZuGC10.jpg"
+      name: 'Jiyu',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/jiyu.huang.5\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_jiyu_01.jpg"
     },
     {
-      name: 'Lisa',
-      age: 20,
-      img: "http://i.imgur.com/1EWwp59.jpg"
+      name: 'Amanda',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/profile.php?id=100000444007981\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_amanda_01.jpg"
     },
     {
-      name: 'Sandra',
-      age: 18,
-      img: "http://i.imgur.com/Lu3laIj.jpg"
+      name: 'Crea',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/shenghung.chang\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_crea_01.jpg"
     },
     {
-      name: 'Chloe',
-      age: 18,
-      img: "http://i.imgur.com/WgYIxhw.png"
+      name: 'Ryan',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/CHENGYENRYAN\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_ryan_01.jpg"
     },
     {
-      name: 'Alexa',
-      age: 23,
-      img: "http://i.imgur.com/D0PQegY.png"
+      name: 'Shasta',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/thinkaholicc\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_shasta_01.jpg"
     },
     {
-      name: 'Maria',
-      age: 21,
-      img: "http://i.imgur.com/eqd5IhH.jpg"
+      name: 'Sunny',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/sunny.yang.5458\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_sunny_01.jpg"
     },
     {
-      name: 'Emma',
-      age: 24,
-      img: "http://i.imgur.com/4F9NXPo.png"
-    },
-    {
-      name: 'Sara',
-      age: 18,
-      img: "http://i40.tinypic.com/ofxe21.jpg"
-    },
-    {
-      name: 'Lara',
-      age: 22,
-      img: "http://i.imgur.com/HMkdN6A.jpg"
+      name: 'Hannah',
+      age: "<a target=\"_blank\" href=\"https://www.facebook.com/profile.php?id=100002801051427\"><i class=\"fa fa-2x fa-facebook-official\"></i></a>",
+      img: "./img/member_hana_01.jpg"
     }
   ],
   add: function(){
     var random =     this.people[Math.floor(Math.random() * this.people.length)];
-    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong>, " + random.age + "</span></div>");
+    this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.age +"&nbsp&nbsp&nbsp&nbsp" + random.name + "</span></div>");
   }
 }
 

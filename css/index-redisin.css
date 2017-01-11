@@ -7479,8 +7479,9 @@ html, body {
 }
 
 .group-section {
-    background-color: #6bb8da;
+    background-color: #103E55;
     position: relative;
+    padding-top:30px;
 }
 
 .footer-section {
@@ -7504,7 +7505,7 @@ html, body {
 }
 
 #img-group-title-01 {
-    height: 100px;
+    height: 70px;
 }
 
 
@@ -7573,4 +7574,19 @@ hr.style13 {
     display: block;
     margin:auto;
     top: 30%;
+}
+.youtube-container{
+    margin-top: 30px;
+    padding:5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.group-intro-1{
+    
+}
+.group-intro-2{
+
+}
+.group-intro-3{
+
 }
