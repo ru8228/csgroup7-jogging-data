@@ -525,32 +525,52 @@
                 <div class="col-md-12 text-center" data-aos="fade-up">
                     <img src="img\img-mapService-title-final.png" class="center-block img-responsive title-image" id="img-mapService-title">
                     <p>台北跑友們最熱愛的跑步地點，究竟有什麼迷人之處?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-8 text-center map-info-01">
-                            <div id="map-recommend" data-aos="zoom-in"></div>
-                        </div>
-                        <div class="col-md-4 text-center map-control-01">
-                            <div id="street-view" data-aos="zoom-in"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-12 text-center" data-aos="fade-up">
-                    <img src="img\img-mapService-title-02-final.png" class="center-block img-responsive title-image" id="img-mapService-title-02">
-                    <p>究竟在北市，距離你我最近又適合活動的跑步地點是哪裡呢?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4 text-center map-control-02" data-aos="zoom-in">
                             <p>地點輸入</p>
-                            <input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box">
+                            <!-- <input id="search_location" placeholder="慢跑點搜尋..." type="text" name="search-box"> -->
+                            <label id="subb">
+                              <select name="subs" id="search_location">
+                                <option value="中永和四號公園">中永和四號公園</option>
+                                <option value="幸福水漾公園">幸福水漾公園</option>
+                                <option value="延平河濱公園(大稻埕)">延平河濱公園(大稻埕)</option>
+                                <option value="大安森林公園">大安森林公園</option>
+                                <option value="中正紀念堂">中正紀念堂</option>
+                                <option value="國父紀念館">國父紀念館</option>
+                                <option value="台北田徑場">台北田徑場</option>
+                                <option value="228和平公園">228和平公園</option>
+                                <option value="大湖公園">大湖公園</option>
+                                <option value="景美河濱公園">景美河濱公園</option>
+                                <option value="木柵河濱公園">木柵河濱公園</option>
+                                <option value="新月橋">新月橋</option>
+                                <option value="北投公園">北投公園</option>
+                                <option value="美堤河濱公園">美堤河濱公園</option>
+                                <option value="新生公園(花博)">新生公園(花博)</option>
+                                <option value="中央藝文公園">中央藝文公園</option>
+                                <option value="百齡右岸河濱公園">百齡右岸河濱公園</option>
+                                <option value="百齡左岸河濱公園">百齡左岸河濱公園</option>
+                                <option value="圓山河濱公園">圓山河濱公園</option>
+                                <option value="大佳河濱公園">大佳河濱公園</option>
+                                <option value="迎風河濱公園">迎風河濱公園</option>
+                                <option value="彩虹河濱公園">彩虹河濱公園</option>
+                                <option value="觀山河濱公園">觀山河濱公園</option>
+                                <option value="成美右岸河濱公園">成美右岸河濱公園</option>
+                                <option value="成美左岸河濱公園">成美左岸河濱公園</option>
+                                <option value="南湖右岸河濱公園">南湖右岸河濱公園</option>
+                                <option value="南湖左岸河濱公園">南湖左岸河濱公園</option>
+                                <option value="河雙河濱公園">河雙河濱公園</option>
+                                <option value="雙溪河濱公園">雙溪河濱公園</option>
+                                <option value="富州河濱公園">富州河濱公園</option>
+                                <option value="福安河濱公園">福安河濱公園</option>
+                                <option value="關渡水岸公園">關渡水岸公園</option>
+                                <option value="龍山河濱公園">龍山河濱公園</option>
+                                <option value="雙園河濱公園">雙園河濱公園</option>
+                                <option value="華中河濱公園">華中河濱公園</option>
+                                <option value="馬場町紀念公園">馬場町紀念公園</option>
+                                <option value="中正河濱公園">中正河濱公園</option>
+                                <option value="古亭河濱公園">古亭河濱公園</option>
+                                <option value="福和河濱公園">福和河濱公園</option>
+                                <option value="道南河濱公園">道南河濱公園</option>
+                              </select>
+                            </label>
                             <input type="button" value="run" onclick="ShowValue()">
                             <div id="test"></div>
                             <script>
@@ -587,8 +607,8 @@
                                                 pm25 = entry.gsx$pm25.$t;
                                                 aqiaffect = entry.gsx$aqiaffect.$t;
                                                 // html += area + " " + location + " " + station + " " + comment + " " + temperature  + " " + rain+ " " +aqi+" "+ pm2+ " " + aqiaffect+ " "+ pm2affect+"<br/>";
-                                                searchresult += "<br/>" + "目前溫度: " + temperature + "<br/>" + "降雨機率: " + rain + "%" + "<br/>" + "AQI空氣汙染指標: " + aqi + "<br/>" + "PM2.5: " + pm25 + "<br/>" + givealert[aqiaffect - 1] +
-                                                    "<br/><br/>跑友這麼說...<br/>" + comment + "let's run";
+                                                searchresult += "<br/>"+"慢跑地點:"+location+"<br/>" + "目前溫度: " + temperature + "<br/>" + "降雨機率: " + rain + "%" + "<br/>" + "AQI空氣汙染指標: " + aqi + "<br/>" + "PM2.5: " + pm25 + "<br/>" + givealert[aqiaffect - 1] +
+                                                    "<br/><br/>跑友這麼說...<br/>" + comment +"<br/>" + "let's run";
                                             }
                                             document.getElementById("test").innerHTML = searchresult;
                                         });
@@ -597,11 +617,16 @@
 
                                 }
                             </script>
-                            <!-- <p>時間</p>
-                        <input id="search_time" type="text" name="search_time" /> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8 text-center map-info-01">
+                            <div id="map-recommend" data-aos="zoom-in"></div>
                         </div>
-                        <div class="col-md-8 text-center map-info-02">
-                            <div id="map-3" data-aos="zoom-in"></div>
+                        <div class="col-md-4 text-center map-control-01">
+                            <div id="street-view" data-aos="zoom-in"></div>
                         </div>
                     </div>
                 </div>
