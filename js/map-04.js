@@ -22,4 +22,159 @@ features: [
 { "type": "Feature", "properties": { "SiteName": "板橋", "SiteEngNam": "Banqiao", "AreaName": "北部空品區", "County": "新北市", "Township": "板橋區", "SiteAddres": "新北市板橋區文化路一段25號","TWD97Lon":121.458667,"TWD97Lat":25.012972, "SiteType": "一般測站" }, "geometry": { "type": "Point","coordinates": [121.458667,25.012972] } }
 { "type": "Feature", "properties": { "SiteName": "林口", "SiteEngNam": "Linkou", "AreaName": "北部空品區", "County": "新北市", "Township": "林口區", "SiteAddres": "新北市林口區民治路25號","TWD97Lon":121.376869,"TWD97Lat":25.077197, "SiteType": "一般測站" }, "geometry": { "type": "Point","coordinates": [121.376869,25.077197] } }
 ]
+};
+
+
+
+
+
+
+var cities = new L.LayerGroup();
+
+
+// token
+var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw';
+
+// 底圖設置
+var grayscale = L.tileLayer(mbUrl, {
+        id: 'mapbox.light',
+        attribution: mbAttr
+    }),
+    streets = L.tileLayer(mbUrl, {
+        id: 'mapbox.streets',
+        attribution: mbAttr
+    });
+
+//設function highlightFeature(e)，用於當hover的時候，物件樣式改變之設定。
+function highlightFeature(e) {
+    var layer = e.target;
+    info.update(layer.feature.properties);
+
+    layer.setStyle({
+        weight: 3,
+        color: '#fe4d4d',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
 }
+
+//設function resetHighlight(e)，用於當mouseout的時候，還原最初之樣式設定。
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    info.update();
+
+}
+
+function getColor(d) {
+    return d == 6300001 ? '#fe2a69' :
+        d == 6300002 ? '#f7aa15' :
+        d == 6300003 ? '#fffd47' :
+        d == 6300004 ? '#4aba58' :
+        d == 6300005 ? '#13dfdf' :
+        d == 6300006 ? '#2a3580' :
+        d == 6300007 ? '#a746eb' :
+        d == 6300008 ? '#a80000' :
+        d == 6300009 ? '#035522' :
+        d == 6300010 ? '#46588e' :
+        d == 6300011 ? '#74ff71' :
+        d == 6300012 ? '#ff2d11' :
+        '#000000';
+}
+//設function style ，用於設定geojson各個資料的，各種CSS屬性。
+function style(feature) {
+    return {
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.3,
+        fillColor: getColor(feature.properties.towncode)
+    };
+}
+
+function style2(feature) {
+    return {
+        weight: 2,
+        opacity: 0.4,
+        color: 'red',
+    };
+}
+//設function zoomToFeature(e)，用於當clik listener啟動時，放大物件。
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+//設function onEachFeature(feature, layer)，用於加入the listeners等事件。
+function onEachFeature(feature, layer) {
+  layer.on({
+    mouseover: highlightFeature,
+    mouseout: resetHighlight,
+    click: zoomToFeature
+  });
+}
+
+
+//設function onEachFeature(feature, layer)，用於加入the listeners等事件。
+function onEachFeature2(feature, layer) {
+
+    var popupContent = "<p>這裡是 " +
+        feature.properties.Name + "~~喔。<br>" +
+        feature.properties.Descriptio + "簡介不錯吧</p>";
+
+    layer.bindPopup(popupContent);
+}
+
+// 選項1
+var baseLayers = {
+    "灰色底圖": grayscale,
+    "街道底圖": streets
+};
+// 選項2
+var overlays = {
+    "河濱公園": cities,
+};
+
+//地圖輸出之div設定
+var map03 = L.map('map-3', {
+    center: [25.087818, 121.538607],
+    zoom: 11,
+    layers: [grayscale, cities]
+});
+// 控制選項
+L.control.layers(baseLayers, overlays).addTo(map03);
+
+// load geojson檔案
+L.geoJson(tpeRiverPark, {
+    onEachFeature: onEachFeature2,
+    pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, {
+            radius: 8,
+            fillColor: "#ff7800",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        });
+    }
+}).addTo(cities);
+
+L.geoJson(stations,{
+  onEachFeature: onEachFeature2,
+  pointToLayer: function(feature, latlng) {
+      return L.circleMarker(latlng, {
+          radius: 8,
+          fillColor: "#ff7800",
+          color: "#000",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+      });
+  }
+}).addTo(cities);

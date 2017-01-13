@@ -1,5 +1,6 @@
 var cities = new L.LayerGroup();
 
+
 // token
 var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
     '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -15,7 +16,8 @@ var grayscale = L.tileLayer(mbUrl, {
         id: 'mapbox.streets',
         attribution: mbAttr
     });
-L.marker([25.087818, 121.538607]).bindPopup('This is Littleton, CO.').addTo(cities),
+
+// L.marker([25.087818, 121.538607]).bindPopup('這是你輸入的位置').addTo(cities),
 
 //設function resetHighlight(e)，用於當mouseout的時候，還原最初之樣式設定。
 function resetHighlight(e) {
@@ -37,14 +39,16 @@ function onEachFeature2(feature, layer) {
     layer.bindPopup(popupContent);
 }
 
+
+
 // 選項1
 var baseLayers = {
-    "Grayscale": grayscale,
-    "Streets": streets
+    "灰色底圖": grayscale,
+    "街道底圖": streets
 };
 // 選項2
 var overlays = {
-    "Cities": cities,
+    "河濱公園": cities,
 };
 
 //地圖輸出之div設定
@@ -59,7 +63,6 @@ L.control.layers(baseLayers, overlays).addTo(map03);
 // load geojson檔案
 L.geoJson(tpeRiverPark, {
     onEachFeature: onEachFeature2,
-
     pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
           radius: 8,
