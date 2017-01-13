@@ -1,4 +1,4 @@
-/* Global Styles 全域設置 */
+    /* Global Styles 全域設置 */
 
 html, body {
     width: 100%;
@@ -35,13 +35,16 @@ body {
 
 
 /* Button Styles 按鈕樣式 */
+
+
 /* wtf is going on??*/
+
 #to-top {
     display: none;
     position: fixed;
     bottom: 5px;
     right: 5px;
-    padding:3px;
+    padding: 3px;
 }
 
 .text-vertical-center>.btn-dark {
@@ -162,9 +165,12 @@ hr.small {
 .toggle {
     margin: 5px 5px 0 0;
 }
+
+
 /* navbar-jog*/
-#navbar-jog{
-}
+
+#navbar-jog {}
+
 
 /* Header 首頁*/
 
@@ -199,13 +205,14 @@ hr.small {
     top: 655px;
 }
 
-
 .about {
     background-image: url(../img/bg-3.jpg);
 }
+
 .about>.section-topic-color2 {
     background-color: #303F9F;
 }
+
 .about-item {
     border-radius: 30px;
     -webkit-transition: .5s;
@@ -214,6 +221,7 @@ hr.small {
     -o-transition: .5s;
     transition: .5s;
 }
+
 .about-item-container:hover .about-item {
     opacity: .35;
     /*-webkit-transform: scale(.95);
@@ -222,6 +230,7 @@ hr.small {
     -o-transform: scale(.95);
     transform: scale(.95);*/
 }
+
 .about-item-container .about-item:hover {
     opacity: 1;
     /*-webkit-transform: scale(1.2);
@@ -230,28 +239,55 @@ hr.small {
     -o-transform: scale(1.2);
     transform: scale(1.2);*/
 }
-#about-sun-item, #about-mark-item, #about-air-item, #about-chart-item, #about-shiny-item, #about-conclusion-item {
-    color: #6C7A89;
-}
-.title-info{
-  background-color: #6C7A89
+
+#about-sun-item {
+    color:#ffed00 ;
 }
 
+#about-mark-item {
+    color:#C3272B ;
+}
+
+#about-air-item {
+    color:#1F4788 ;
+}
+
+#about-chart-item {
+    color:#26A65B ;
+}
+
+#about-shiny-item {
+    color:#ec8e00 ;
+}
+
+#about-conclusion-item {
+    color:#b669b3 ;
+}
+
+.title-info {
+    background-color: #6C7A89
+}
+
+
 /*about-info 區  default value hidden */
+
 .about-info-item {
     display: none;
     height: 300px;
     width: 100%;
     border-radius: 10px;
 }
+
 .about-info-item-1 {
     display: inline-block;
 }
+
 .arrow_box {
     position: relative;
     background: rgba(186, 186, 186, 0.48);
     border: 2px solid #6C7A89;
 }
+
 .arrow_box:after, .arrow_box:before {
     bottom: 100%;
     left: 11%;
@@ -263,13 +299,16 @@ hr.small {
     pointer-events: none;
 }
 
+
 /*箭頭的設置方法*/
+
 .arrow_box:after {
     border-color: rgba(0, 0, 0, 0);
     border-bottom-color: #white;
     border-width: 15px;
     margin-left: -15px;
 }
+
 .arrow_box:before {
     border-color: rgba(108, 122, 137, 0);
     border-bottom-color: #6C7A89;
@@ -277,55 +316,68 @@ hr.small {
     margin-left: -21px;
 }
 
-/* Services 地圖分析*/
 
+/* Services 地圖分析*/
 
 .services {
     height: auto;
 }
+
 .services>.section-topic-color2 {
     background-color: #303F9F;
 }
+
 .services>.section-topic {
     background-color:
 }
+
 .map-service {
     height: 400px;
     padding: 10px;
 }
+
 .map-service-bar {
     border-color: rgb(115, 108, 109);
     border-width: 3px;
     border-style: solid;
     border-radius: 15px;
 }
-#map,#map-3 {
+
+#map, #map-3 {
     height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .map-info-container {
     padding: 0px;
 }
+
 @media(max-width:768px) {
     .map {
         height: 75%;
     }
 }
+
 .map iframe {
     pointer-events: none;
 }
 
+
 /* map地圖顯示的資訊 css */
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
 }
+
 .info h4 {
     margin: 0 0 5px;
     color: #777;
 }
 
+
 /* Google定位地圖暫定。*/
+
 .map-location {
     height: 500px;
     background-color: white;
@@ -337,18 +389,22 @@ hr.small {
     border-style: solid;
     border-radius: 15px;
 }
+
 .map-location-info {
     height: 100%;
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
 }
+
 .map-location-map {
     height: 100%;
     padding: 10px;
 }
+
 #map-2 {
     height: 100%;
 }
+
 .controls {
     margin-top: 10px;
     border: 1px solid transparent;
@@ -359,6 +415,7 @@ hr.small {
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+
 #pac-input {
     background-color: #fff;
     font-family: Roboto;
@@ -369,22 +426,27 @@ hr.small {
     text-overflow: ellipsis;
     width: 300px;
 }
+
 #pac-input:focus {
     border-color: #4d90fe;
 }
+
 .pac-container {
     font-family: Roboto;
 }
+
 #type-selector {
     color: #fff;
     background-color: #4d90fe;
     padding: 5px 11px 0px 11px;
 }
+
 #type-selector label {
     font-family: Roboto;
     font-size: 13px;
     font-weight: 300;
 }
+
 #target {
     width: 345px;
-/* Rocket!!!*/
+    /* Rocket!!!*/
